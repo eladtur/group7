@@ -2,152 +2,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #F8F9FA;
-    margin: 0;
-    padding: 0;
-    color: #CC9900; /* Paragraph font color */
-}
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    main {
+        padding-top: 120px;
+    }
 
-.top-bar {
-    display: flex;
-    align-items: center; /* Center content vertically */
-    background-color: #DBBDD7;
-    color: #917C14; /* Timer and menu font color */
-    text-align: center;
-    padding: 10px;
-    justify-content: center; /* Center the timer */
-    position: relative; /* For absolute positioning of left-icons */
-}
+    .cake-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
-.top-bar .left-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-    position: absolute;
-    left: 10px; /* Adjust as needed for padding */
-}
+    .cake-section img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ECE9E2;
+    }
 
-.logo {
-    display: block;
-    text-align: center;
-    font-family: 'Bernard MT Condensed', sans-serif;
-    color: #CC9900; /* Logo font color */
-    font-size: 24px;
-}
+    .cake-description {
+        text-align: center;
+        margin: 20px 0;
+    }
 
-nav {
-    background-color: #E6E6FA;
-}
+    .price {
+        font-weight: bold;
+        color: #000000;
+    }
 
-nav .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+    .customize {
+        text-align: left;
+        width: 50%;
+        margin: auto;
+    }
 
-nav .menu li {
-    margin: 0;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    flex: 1; /* Ensures that all li elements take equal space */
-    text-align: center;
-}
+    .customize h2 {
+        font-family: 'Open Sans', sans-serif;
+        color: #BE82B4;
+    }
 
-nav .menu li a {
-    text-decoration: none;
-    color: #917C14; /* Timer and menu font color */
-    padding: 15px 20px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
+    .customize label {
+        display: block;
+        width: 100%; /* Ensure labels are full width */
+        margin-top: 10px;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
 
-nav .menu li:last-child {
-    border-right: 1px solid black;
-}
+    .customize select, .customize input[type="number"], .customize input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid #ECE9E2;
+        font-family: 'Open Sans', sans-serif;
+        box-sizing: border-box; /* Ensure the element's total width and height include padding and border */
+    }
 
-nav .menu li a:hover {
-    background-color: #DBBDD7;
-    color: #917C14; /* Ensure text color on hover */
-}
+    .customize button {
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 15px;
+        padding: 10px;
+        border: none;
+        background-color: #E6E6FA;
+        cursor: pointer;
+    }
 
-main {
-    padding-top: 120px;
-}
-
-.cake-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.cake-section img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ECE9E2;
-}
-
-.cake-description {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.price {
-    font-weight: bold;
-    color: #000000;
-}
-
-.customize {
-    text-align: left;
-    width: 50%;
-    margin: auto;
-}
-
-.customize h2 {
-    font-family: 'Open Sans', sans-serif;
-    color: #BE82B4;
-}
-
-.customize label {
-    display: block;
-    width: 100%; /* Ensure labels are full width */
-    margin-top: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-.customize select, .customize input[type="number"], .customize input[type="text"] {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    border: 1px solid #ECE9E2;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box; /* Ensure the element's total width and height include padding and border */
-}
-
-.customize button {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background-color: #E6E6FA;
-    cursor: pointer;
-}
-
-.customize button:hover {
-    background-color: #DBBDD7;
+    .customize button:hover {
+        background-color: #DBBDD7;
+    }
 }

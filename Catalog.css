@@ -1,0 +1,60 @@
+/* Catalog.css */
+main h1 {
+    font-family: 'Bernard MT Condensed', sans-serif;
+    color: #CC9900; /* Match the logo color */
+    text-align: center;
+    font-size: 36px; /* Adjust the size as needed */
+    margin-top: 20px;
+}
+
+/* Rest of your CSS remains the same */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.cake-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.cake-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cake-item h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.cake-item p {
+    color: #777;
+}
+
+.cake-item .price {
+    font-size: 1.2em;
+    color: #CC9900;
+    margin: 10px 0;
+}
+
+.cake-item button {
+    padding: 10px 20px;
+    background-color: #DBBDD7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cake-item button:hover {
+    background-color: #917C14;
+}

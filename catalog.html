@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Catalog</title>
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="Catalog.css">
 </head>
 <body>
-$END$
+    <div id="shared-content"></div>
+    <script>
+        // Fetch and include the shared content
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+            });
+    </script>
+
+    <main>
+        <h1>Cake Catalog</h1>
+        <div id="cake-catalog" class="catalog"></div>
+    </main>
+
+    <div class="scroll-option">
+        <button onclick="scrollToTop()">Scroll to Top</button>
+    </div>
+
+    <script src="shared.js"></script>
+    <script src="catalog.js"></script>
 </body>
 </html>
