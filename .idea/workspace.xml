@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="" />
+    <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DesignYourCake.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignYourCake.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignYourCake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hg8HnqG2uumRDaXKciDhv8cRLT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,6 +40,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/User",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,7 +71,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718004274751</updated>
-      <workItem from="1718004277072" duration="3585000" />
+      <workItem from="1718004277072" duration="4974000" />
+      <workItem from="1718009854115" duration="335000" />
     </task>
     <servers />
   </component>
