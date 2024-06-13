@@ -1,0 +1,62 @@
+.create-account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px; /* No top margin */
+    margin-bottom: 50px; /* Increased bottom margin */
+}
+
+.account-form {
+    width: 400px; /* Width of the box */
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px; /* No margin between the logo and top of the box */
+}
+
+.account-form h1 {
+    font-family: 'Bernard MT Condensed', sans-serif;
+    color: #CC9900;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.account-form label {
+    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+    color: #CC9900;
+    display: block;
+    margin-top: 10px;
+    width: 100%; /* Make the labels take full width */
+}
+
+.account-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+}
+
+.account-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #DBBDD7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.account-form button:hover {
+    background-color: #917C14;
+}

@@ -1,0 +1,168 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    color: #CC9900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DBBDD7;
+    color: #917C14;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.left-icons {
+    position: absolute;
+    left: 10px;
+}
+
+.left-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #917C14;
+}
+
+.left-icons .icon {
+    width: 24px;
+    height: 24px;
+}
+
+nav {
+    background-color: #E6E6FA;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav .menu li {
+    margin: 0;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    flex: 1; /* Ensures that all li elements take equal space */
+    text-align: center;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: #917C14;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+nav .menu li:last-child {
+    border-right: 1px solid black;
+}
+
+nav .menu li a:hover {
+    background-color: #DBBDD7;
+    color: #917C14; /* Ensure text color on hover */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjust height to take into account the top bar and prevent scroll */
+    width: 100%;
+    margin-top: -20px; /* Shift the box up slightly to prevent scroll */
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%; /* Ensure the box width is the same as before */
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px; /* Reduce top padding */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container img.logo {
+    margin: 0 auto; /* Remove margin at the top of the logo */
+    width: 100px;
+    padding-top: 0; /* Ensure no padding at the top of the image */
+}
+
+.main-title {
+    font-family: 'Bernard MT Condensed', sans-serif;
+    font-size: 1.5em;
+    color: #CC9900;
+    margin: 5px 0; /* Adjust margin to reduce space between the logo and title */
+}
+
+.sub-title {
+    font-family: 'Bernard MT Condensed', sans-serif;
+    font-size: 1.2em;
+    color: #CC9900;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #917C14;
+}
+
+.login-container input {
+    width: 90%; /* Make the input fields a bit smaller to be clearly within the container */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0; /* Remove extra space at the bottom */
+}
+
+.button-group button {
+    width: 48%;
+    padding: 10px;
+    background-color: #DBBDD7;
+    color: #917C14;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #CC9900;
+    color: #fff;
+}

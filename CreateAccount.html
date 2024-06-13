@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="CreateAccount.css">
+</head>
+<body>
+    <div id="shared-content"></div>
+    <script>
+        // Fetch and include the shared content
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+            });
+    </script>
+
+    <main>
+        <div class="create-account-container">
+            <div class="account-form">
+                <h1>Create an Account</h1>
+                <form id="create-account-form">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Password*</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="confirmPassword">Confirm Password*</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                    <label for="phone">Phone*</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="CreateAccount.js"></script>
+</body>
+</html>
