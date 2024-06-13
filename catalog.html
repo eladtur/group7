@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Cake Catalog</title>
     <link rel="stylesheet" href="General.css">
-    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="Catalog.css">
 </head>
 <body>
     <div id="shared-content"></div>
@@ -19,16 +19,15 @@
     </script>
 
     <main>
-        <div class="cart-section">
-            <h1>Shopping Cart</h1>
-            <div id="cart-items" class="cart-items">
-                <!-- Cart items will be dynamically inserted here -->
-            </div>
-            <div id="total-price">Total Price: $0</div>
-            <button class="checkout-button">Checkout</button>
-        </div>
+        <h1>Cake Catalog</h1>
+        <div id="cake-catalog" class="catalog"></div>
     </main>
 
-    <script src="cart.js"></script>
+    <div class="scroll-option">
+        <button onclick="scrollToTop()">Scroll to Top</button>
+    </div>
+
+    <script src="shared.js"></script>
+    <script src="catalog.js"></script>
 </body>
 </html>

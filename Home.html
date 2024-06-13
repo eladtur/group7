@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Custom Cakes</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="shared-content"></div>
+    <script>
+        // Fetch and include the shared content
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+            });
+    </script>
+
+    <main>
+        <div class="about">
+            <h1>Welcome to Our Bakery</h1>
+            <p>We are a bakery that combines cakes designed in a luxurious and high style, allowing buyers to customize the flavors and composition of their cake without changing the price. This way, you can get a cake designed at the highest level, perfectly tailored to your taste palette.</p>
+        </div>
+
+        <div class="team">
+            <h2>Meet Our Team</h2>
+            <div class="ceo">
+                <img src="pics/TheMuffinMan.jpeg" alt="The Muffin Man">
+                <p>The Muffin Man</p>
+            </div>
+            <div class="ceo">
+                <img src="pics/TheCakesLady.jpeg" alt="The Cake Lady">
+                <p>The Cake Lady</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="scroll-option">
+        <button onclick="scrollToTop()">Scroll to Top</button>
+    </div>
+    <script src="shared.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

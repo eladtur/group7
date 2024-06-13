@@ -1,153 +1,87 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #F8F9FA;
-    margin: 0;
-    padding: 0;
-    color: #CC9900; /* Paragraph font color */
+
+.cake-details {
+    max-width: 800px;
+    margin: 30px auto;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    color: #917C14;
 }
 
-header {
-    position: fixed;
+.cake-details img {
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.top-bar {
-    display: flex;
-    align-items: center; /* Center content vertically */
-    background-color: #DBBDD7;
-    color: #917C14; /* Timer and menu font color */
-    text-align: center;
-    padding: 10px;
-    justify-content: center; /* Center the timer */
-    position: relative; /* For absolute positioning of left-icons */
-}
-
-.top-bar .left-icons {
-    display: flex;
-    gap: 10px; /* Space between icons */
-    position: absolute;
-    left: 10px; /* Adjust as needed for padding */
-}
-
-.logo {
-    display: block;
-    text-align: center;
-    font-family: 'Bernard MT Condensed', sans-serif;
-    color: #CC9900; /* Logo font color */
-    font-size: 24px;
-}
-
-nav {
-    background-color: #E6E6FA;
-}
-
-nav .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav .menu li {
-    margin: 0;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    flex: 1; /* Ensures that all li elements take equal space */
-    text-align: center;
-}
-
-nav .menu li a {
-    text-decoration: none;
-    color: #917C14; /* Timer and menu font color */
-    padding: 15px 20px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-nav .menu li:last-child {
-    border-right: 1px solid black;
-}
-
-nav .menu li a:hover {
-    background-color: #DBBDD7;
-    color: #917C14; /* Ensure text color on hover */
-}
-
-main {
-    padding-top: 120px;
-}
-
-.cake-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.cake-section img {
-    max-width: 100%;
     height: auto;
-    border: 1px solid #ECE9E2;
+    border-radius: 8px;
 }
 
-.cake-description {
-    text-align: center;
-    margin: 20px 0;
+.cake-details h2 {
+    margin: 20px 0 10px;
+    font-size: 30px;
+    color: #917C14;
 }
 
-.price {
-    font-weight: bold;
-    color: #000000;
+.cake-details p {
+    font-size: 18px;
+     color: #917C14;
+}
+
+.cake-details .price {
+    font-size: 20px;
+    color: #CC9900;
+    margin-top: 10px;
+
 }
 
 .customize {
-    text-align: left;
-    width: 50%;
-    margin: auto;
+    max-width: 800px;
+    margin: 30px auto;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .customize h2 {
-    font-family: 'Open Sans', sans-serif;
-    color: #BE82B4;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.customize label {
+.customize form label {
     display: block;
-    width: 100%; /* Ensure labels are full width */
-    margin-top: 10px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 10px 0 5px;
 }
 
-.customize select, .customize input[type="number"], .customize input[type="text"] {
+.customize form select,
+.customize form input {
     width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    border: 1px solid #ECE9E2;
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box; /* Ensure the element's total width and height include padding and border */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.customize button {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 15px;
+.customize form button {
+    width: 48%;
     padding: 10px;
     border: none;
-    background-color: #E6E6FA;
+    border-radius: 4px;
+    background-color: #BE82B4;
+    color: #fff;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.customize button:hover {
+
+.customize form button:hover {
+    opacity: 0.9;
     background-color: #DBBDD7;
 }

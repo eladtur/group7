@@ -1,0 +1,103 @@
+/* General.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F9FA;
+    margin: 0;
+    padding: 0;
+    color: #CC9900; /* Paragraph font color */
+}
+  .scroll-option {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999; /* Ensure it's above other content */
+
+  }
+      header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DBBDD7;
+    color: #917C14; /* Timer and menu font color */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.left-icons {
+    position: absolute;
+    left: 10px;
+}
+
+.left-icons a {
+    margin-right: 10px;
+}
+
+.timer {
+    flex: 1;
+    text-align: center;
+}
+.logo {
+    display: block;
+    text-align: center;
+    font-family: 'Bernard MT Condensed', sans-serif;
+    color: #CC9900; /* Logo font color */
+    font-size: 24px;
+}
+
+nav {
+    background-color: #E6E6FA;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav .menu li {
+    margin: 0;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    flex: 1; /* Ensures that all li elements take equal space */
+    text-align: center;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: #917C14; /* Timer and menu font color */
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+nav .menu li:last-child {
+    border-right: 1px solid black;
+}
+
+nav .menu li a:hover {
+    background-color: #DBBDD7;
+    color: #917C14; /* Ensure text color on hover */
+}
+.logo {
+    padding-top: 150px;
+}
+
+main {
+    padding-top: 100px; /* Ensure content does not overlap with the header */
+}

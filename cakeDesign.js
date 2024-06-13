@@ -1,36 +1,79 @@
-// JavaScript for Timer and Button Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const selectedCake = JSON.parse(sessionStorage.getItem('selectedCake'));
+    if (selectedCake) {
+        document.getElementById('cake-details').innerHTML = `
+            <img src="${selectedCake.image}" alt="${selectedCake.name}">
+            <h2>${selectedCake.name}</h2>
+            <p>${selectedCake.description}</p>
+            <p class="price">$${selectedCake.price}</p>
+        `;
+    } else {
+        document.getElementById('cake-details').innerHTML = '<p>No cake selected. Please go back to the catalog and select a cake.</p>';
+    }
+});
 
-// Countdown Timer
-function startTimer(duration, display) {
-    let timer = duration, hours, minutes, seconds;
-    setInterval(function () {
-        hours = parseInt(timer / 3600, 10);
-        minutes = parseInt((timer % 3600) / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = "Timer For Popup Sale " + hours + ":" + minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-window.onload = function () {
-    let saleTime = 16 * 3600 + 20 * 60 + 59; // 16:20:59 in seconds
-    let display = document.querySelector('#timer');
-    startTimer(saleTime, display);
-};
-
-// Button Functionality
 function buyNow() {
-    alert("Thank you for your purchase!");
+   // Get form inputs
+    var cakeBase = document.getElementById("cake-base").value;
+    var cream = document.getElementById("cream").value;
+    var dietaryPreference = document.getElementById("dietary-preference").value;
+    var inscription = document.getElementById("inscription").value;
+    var quantity = document.getElementById("quantity").value;
+
+    // Simple validation
+    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
+        alert("Please fill in all fields.");
+        return false;
+    }
+
+    // Create an object to store cake details
+    var selectedToBuyCake = {
+        cakeBase: cakeBase,
+        cream: cream,
+        dietaryPreference: dietaryPreference,
+        inscription: inscription,
+        quantity: quantity
+    };
+
+    // Store the cake details in sessionStorage
+    sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
+
+    // Proceed with adding the cake to the cart
+    alert("Cake added to cart successfully!");
+
+    // Redirect to cart.html
+    window.location.href = 'cart.html';
+
 }
+
 
 function addToCart() {
-    alert("Item added to your cart!");
+    // Get form inputs
+    var cakeBase = document.getElementById("cake-base").value;
+    var cream = document.getElementById("cream").value;
+    var dietaryPreference = document.getElementById("dietary-preference").value;
+    var inscription = document.getElementById("inscription").value;
+    var quantity = document.getElementById("quantity").value;
+
+    // Simple validation
+    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
+        alert("Please fill in all fields.");
+        return false;
+    }
+
+    // Create an object to store cake details
+    var selectedToBuyCake = {
+        cakeBase: cakeBase,
+        cream: cream,
+        dietaryPreference: dietaryPreference,
+        inscription: inscription,
+        quantity: quantity
+    };
+
+    // Store the cake details in sessionStorage
+    sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
+
+    // Proceed with adding the cake to the cart
+    alert("Cake added to cart successfully!");
+
 }

@@ -5,81 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Cake Page</title>
     <link rel="stylesheet" href="General.css">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="cakeDesign.css">
 </head>
 <body>
-    <header>
-        <div class="top-bar">
-            <div class="left-icons">
-                <a href="user.html"><img src="user.png" height="16" width="16" alt="User Icon"/></a>
-                <a href="cart.html"><img src="shopping-cart.png" height="16" width="16" alt="Shopping Cart Icon"/></a>
-            </div>
-            <div class="timer" id="timer">Timer For Popup Sale 16:20:59</div>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cakes Catalog</a></li>
-                <li><a href="#">Set an Appointment</a></li>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">Inspiration</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="logo">
-            <img src="wedding-cake.png" height="100" width="100" alt="Logo"/>
-            <div>S&E Luxury Wedding Cakes</div>
-        </div>
-        <div class="cake-section">
-            <img src="69029002-225b-4fe6-8118-0574a1c9c6d7.jpeg" height="736" width="736" alt="Cake"/>
-            <div class="cake-description">
-                <p>Our elegant two-tier wedding cake is the perfect centerpiece for your special day. Adorned with intricate lace patterns and hand-crafted sugar flowers, this cake is both beautiful and delicious.</p>
-            </div>
-            <div class="customize">
-                <h2>Customise your cake</h2>
-                <form>
-                    <label for="cake-base">Cake Base</label>
-                    <select id="cake-base">
-                        <option>Vanilla</option>
-                        <option>Chocolate</option>
-                        <option>Lemon</option>
-                        <option>Coconut</option>
-                        <option>Pistachio</option>
-                        <option>Caramel</option>
-                        <option>Red velvet</option>
-                        <option>Strawberry</option>
-                        <option>Coffee</option>
-                        <option>Carrot</option>
-                    </select>
-                    <label for="cream">Cream</label>
-                    <select id="cream">
-                        <option>Buttercream</option>
-                        <option>Strawberry</option>
-                        <option>Ganache</option>
-                        <option>Cream cheese</option>
-                        <option>Lemon</option>
-                        <option>Raspberry</option>
-                        <option>Chocolate</option>
-                    </select>
-                    <label for="dietary-preference">Dietary Preference</label>
-                    <select id="dietary-preference">
-                        <option>Dairy</option>
-                        <option>Vegan</option>
-                        <option>Dairy Free</option>
-                    </select>
-                    <label for="inscription">Inscription</label>
-                    <input type="text" id="inscription">
-                    <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" min="1">
-                    <p class="price">100$</p>
-                    <button type="button" onclick="buyNow()">Buy it now</button>
-                    <button type="button" onclick="addToCart()">Add to Shopping cart</button>
-                </form>
-            </div>
-        </div>
-    </main>
-    <script src="script.js"></script>
+<div id="shared-content"></div>
+<script>
+    // Fetch and include the shared content
+    fetch('shared.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('shared-content').innerHTML = html;
+        });
+</script>
+
+<main>
+    <div id="cake-details" class="cake-details"></div>
+    <div class="customize">
+        <h2>Customize your cake</h2>
+        <form>
+            <label for="cake-base">Cake Base</label>
+            <select id="cake-base">
+                <option>Vanilla</option>
+                <option>Chocolate</option>
+                <option>Lemon</option>
+                <option>Coconut</option>
+                <option>Pistachio</option>
+                <option>Caramel</option>
+                <option>Red velvet</option>
+                <option>Strawberry</option>
+                <option>Coffee</option>
+                <option>Carrot</option>
+            </select>
+            <label for="cream">Cream</label>
+            <select id="cream">
+                <option>Buttercream</option>
+                <option>Strawberry</option>
+                <option>Ganache</option>
+                <option>Cream cheese</option>
+                <option>Lemon</option>
+                <option>Raspberry</option>
+                <option>Chocolate</option>
+            </select>
+            <label for="dietary-preference">Dietary Preference</label>
+            <select id="dietary-preference">
+                <option>Dairy</option>
+                <option>Vegan</option>
+                <option>Dairy Free</option>
+            </select>
+            <label for="inscription">Inscription</label>
+            <input type="text" id="inscription">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1">
+            <button type="button" onclick="buyNow()">Buy it now</button>
+            <button type="button" onclick="addToCart()">Add to Shopping Cart</button>
+        </form>
+    </div>
+</main>
+<div class="scroll-option">
+    <button onclick="scrollToTop()">Scroll to Top</button>
+</div>
+<script src="shared.js"></script>
+<script src="cakeDesign.js"></script>
+
 </body>
 </html>

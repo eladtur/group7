@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignYourCake.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignYourCake.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignYourCake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/TheCakesLady.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/TheMuffinMan.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/General.css" beforeDir="false" afterPath="$PROJECT_DIR$/General.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cakeDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cakeDesign.html" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cakeDesign.js" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/shared.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;shirabekasis&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/shirabekasis/group7.git&quot;,
+    &quot;accountId&quot;: &quot;6bea85d8-53fb-4171-b2de-09d7a5d144f3&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -35,23 +57,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/User",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/דניאל/PycharmProjects/group7&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\דניאל\PycharmProjects\group7\pics" />
+      <recent name="C:\Users\דניאל\PycharmProjects\group7" />
       <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\Pics" />
     </key>
   </component>
@@ -73,6 +98,8 @@
       <updated>1718004274751</updated>
       <workItem from="1718004277072" duration="4974000" />
       <workItem from="1718009854115" duration="335000" />
+      <workItem from="1718012135368" duration="1338000" />
+      <workItem from="1718013588065" duration="16373000" />
     </task>
     <servers />
   </component>
