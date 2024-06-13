@@ -1,4 +1,4 @@
-/* Catalog.css */
+/* Catalog Styles */
 main h1 {
     font-family: 'Bernard MT Condensed', sans-serif;
     color: #CC9900; /* Match the logo color */
@@ -7,7 +7,7 @@ main h1 {
     margin-top: 20px;
 }
 
-/* Rest of your CSS remains the same */
+/* Ensure consistent sizing and layout */
 .catalog {
     display: flex;
     flex-wrap: wrap;
@@ -20,24 +20,31 @@ main h1 {
     border-radius: 5px;
     padding: 15px;
     margin: 10px;
-    width: 250px;
+    width: 250px; /* Fixed width */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cake-item img {
     width: 100%;
-    height: auto;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Limit height to avoid excessively tall images */
     border-radius: 5px;
+    object-fit: contain; /* Ensure the entire image is visible without cutting */
 }
 
 .cake-item h3 {
     margin: 10px 0;
     color: #333;
+    flex-grow: 1; /* Allows the heading to grow and push the button down */
 }
 
 .cake-item p {
     color: #777;
+    flex-grow: 1; /* Allows the description to grow and push the button down */
 }
 
 .cake-item .price {
@@ -53,6 +60,7 @@ main h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px; /* Ensure there is space above the button */
 }
 
 .cake-item button:hover {

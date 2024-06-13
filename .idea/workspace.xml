@@ -5,41 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Catalog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/BlossomingBeautyCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/BlueBlossomCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/CupcakeCarnival.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/DecadentDelightCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/ElegantLayersCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/FloraCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/FloralCascadeCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/JuliCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/JupiterCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/MagicGardenCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/MajesticTierCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/Nicole.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/PinkHeartCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/PrettyInPinkCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/PurpleDelightCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/RainbowSprinkleCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/RoseEleganceCake.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pics/YasminCake.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/TheCakesLady.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pics/TheMuffinMan.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/69029002-225b-4fe6-8118-0574a1c9c6d7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/pics/69029002-225b-4fe6-8118-0574a1c9c6d7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/Catalog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/General.css" beforeDir="false" afterPath="$PROJECT_DIR$/General.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cakeDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cakeDesign.html" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cakeDesign.js" beforeDir="false" afterPath="$PROJECT_DIR$/cakeDesign.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/shared.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/shopping-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wedding-cake.png" beforeDir="false" afterPath="$PROJECT_DIR$/pics/wedding-cake-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/צילום מסך 2024-05-22 134435.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -120,7 +99,7 @@
       <workItem from="1718004277072" duration="4974000" />
       <workItem from="1718009854115" duration="335000" />
       <workItem from="1718012135368" duration="1338000" />
-      <workItem from="1718013588065" duration="8910000" />
+      <workItem from="1718013588065" duration="16373000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Cart.css">
 </head>
 <body>
-<div id="shared-content"></div>
+    <div id="shared-content"></div>
     <script>
         // Fetch and include the shared content
         fetch('shared.html')
@@ -17,57 +17,18 @@
                 document.getElementById('shared-content').innerHTML = html;
             });
     </script>
-<!--    <header>-->
-<!--        <div class="top-bar">-->
-<!--            <div class="left-icons">-->
-<!--                <a href="user.html"><img src="user.png" height="16" width="16" alt="User Icon"/></a>-->
-<!--                <a href="cart.html"><img src="shopping-cart.png" height="16" width="16" alt="Shopping Cart Icon"/></a>-->
-<!--            </div>-->
-<!--            <div class="timer" id="timer">Timer For Popup Sale 16:20:59</div>-->
-<!--        </div>-->
-<!--        <nav>-->
-<!--            <ul class="menu">-->
-<!--                <li><a href="index.html">Home</a></li>-->
-<!--                <li><a href="#">Cakes Catalog</a></li>-->
-<!--                <li><a href="#">Set an Appointment</a></li>-->
-<!--                <li><a href="#">Review</a></li>-->
-<!--                <li><a href="#">Inspiration</a></li>-->
-<!--                <li><a href="#">Contact us</a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </header>-->
+
     <main>
         <div class="cart-section">
             <h1>Shopping Cart</h1>
-            <div class="cart-item">
-                <img src="pics/MagicGardenCake.jpeg" alt="Cake Image 1" class="cart-image">
-                <div class="cart-details">
-                    <label for="quantity1">Quantity</label>
-                    <input type="number" id="quantity1" min="1">
-                    <button class="remove-button">Remove</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <img src="pics/YasminCake.jpeg" alt="Cake Image 2" class="cart-image">
-                <div class="cart-details">
-                    <label for="quantity2">Quantity</label>
-                    <input type="number" id="quantity2" min="1">
-                    <button class="remove-button">Remove</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <img src="pics/JuliCake.jpeg" alt="Cake Image 3" class="cart-image">
-                <div class="cart-details">
-                    <label for="quantity3">Quantity</label>
-                    <input type="number" id="quantity3" min="1">
-
-                    <button class="remove-button">Remove</button>
-                </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
             </div>
             <div id="total-price">Total Price: $0</div>
             <button class="checkout-button">Checkout</button>
         </div>
     </main>
+
     <script src="cart.js"></script>
 </body>
 </html>
