@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ContactUs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ContactUs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateAccount.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateAccount.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateAccount.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.css" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ContactUs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/shared.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,26 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.CreateAccount.html.executor": "Run",
-    "JavaScript Debug.Home.html.executor": "Run",
-    "JavaScript Debug.Login.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/דניאל/PycharmProjects/group7",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.CreateAccount.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Home.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.Login.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/דניאל/PycharmProjects/group7&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\דניאל\PycharmProjects\group7\pics" />
@@ -104,7 +98,9 @@
       <workItem from="1718009854115" duration="335000" />
       <workItem from="1718012135368" duration="1338000" />
       <workItem from="1718013588065" duration="16373000" />
-      <workItem from="1718279763796" duration="17324000" />
+      <workItem from="1718279763796" duration="17937000" />
+      <workItem from="1718626595600" duration="2599000" />
+      <workItem from="1718637397694" duration="10006000" />
     </task>
     <servers />
   </component>
