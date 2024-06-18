@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Order Confirmation</title>
     <link rel="stylesheet" href="General.css">
-    <link rel="stylesheet" href="Cart.css">
+    <link rel="stylesheet" href="Confirmation.css">
 </head>
 <body>
     <div id="shared-content"></div>
     <script>
+        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
@@ -18,16 +19,14 @@
     </script>
 
     <main>
-        <div class="cart-section">
-            <h1>Shopping Cart</h1>
-            <div id="cart-items" class="cart-items">
-                <!-- Cart items will be dynamically inserted here -->
+        <div class="confirmation-section">
+            <h1>Order Confirmation</h1>
+            <div id="confirmation-message">
+                <!-- Order details will be displayed here -->
             </div>
-            <div id="total-price">Total Price: $0</div>
-            <button class="checkout-button" onclick="window.location.href='checkout.html'">Checkout</button>
         </div>
     </main>
 
-    <script src="cart.js"></script>
+    <script src="confirmation.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
+const selectedCake = JSON.parse(sessionStorage.getItem('selectedCake'));
 document.addEventListener('DOMContentLoaded', () => {
-    const selectedCake = JSON.parse(sessionStorage.getItem('selectedCake'));
+
     if (selectedCake) {
         document.getElementById('cake-details').innerHTML = `
             <img src="${selectedCake.image}" alt="${selectedCake.name}">
@@ -46,34 +47,66 @@ function buyNow() {
 
 }
 
-
 function addToCart() {
-    // Get form inputs
     var cakeBase = document.getElementById("cake-base").value;
     var cream = document.getElementById("cream").value;
     var dietaryPreference = document.getElementById("dietary-preference").value;
     var inscription = document.getElementById("inscription").value;
-    var quantity = document.getElementById("quantity").value;
+    var quantity = parseInt(document.getElementById("quantity").value);
 
-    // Simple validation
-    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
+    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity <= 0) {
         alert("Please fill in all fields.");
-        return false;
+        return;
     }
 
-    // Create an object to store cake details
-    var selectedToBuyCake = {
-        cakeBase: cakeBase,
+    var cake = {
+        id: new Date().getTime(),
+        name: `${cakeBase} Cake`,
+        image: selectedCake.image ,
+        base: cakeBase,
         cream: cream,
         dietaryPreference: dietaryPreference,
         inscription: inscription,
-        quantity: quantity
+        quantity: quantity,
+        price: 100 // Example price, replace with actual logic
     };
 
-    // Store the cake details in sessionStorage
-    sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
-
-    // Proceed with adding the cake to the cart
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    cartItems.push(cake);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
     alert("Cake added to cart successfully!");
-
 }
+
+
+
+//
+// function addToCart() {
+//     // Get form inputs
+//     var cakeBase = document.getElementById("cake-base").value;
+//     var cream = document.getElementById("cream").value;
+//     var dietaryPreference = document.getElementById("dietary-preference").value;
+//     var inscription = document.getElementById("inscription").value;
+//     var quantity = document.getElementById("quantity").value;
+//
+//     // Simple validation
+//     if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
+//         alert("Please fill in all fields.");
+//         return false;
+//     }
+//
+//     // Create an object to store cake details
+//     var selectedToBuyCake = {
+//         cakeBase: cakeBase,
+//         cream: cream,
+//         dietaryPreference: dietaryPreference,
+//         inscription: inscription,
+//         quantity: quantity
+//     };
+//
+//     // Store the cake details in sessionStorage
+//     sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
+//
+//     // Proceed with adding the cake to the cart
+//     alert("Cake added to cart successfully!");
+//
+// }
