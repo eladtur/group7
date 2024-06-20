@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set an Appointment</title>
+    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="SetAppointment.css">
+</head>
+<body>
+    <div id="shared-content"></div>
+    <script>
+        // Fetch and include the shared content
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+            });
+    </script>
+
+    <main>
+        <div class="appointment-container">
+            <h1>Set Your Appointment</h1>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="name">Your Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Telephone*</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Choose Time*</label>
+                    <select id="time" name="time" required>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="9:00 AM">9:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <!-- Add more time slots as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preference">Dietary Preference*</label>
+                    <select id="preference" name="preference" required>
+                        <option value="Option 1">Option 1</option>
+                        <option value="Option 2">Option 2</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Choose Date*</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </div>
+                <button type="submit">Set Appointment</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="SetAppointment.js"></script>
+</body>
+</html>
