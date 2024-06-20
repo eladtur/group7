@@ -53,21 +53,63 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function validateForm() {
-    // Basic form validation
-    const city = document.getElementById('city').value;
-    const houseNumber = document.getElementById('houseNumber').value;
-    const streetName = document.getElementById('streetName').value;
-    const zipCode = document.getElementById('zipCode').value;
-    const ccType = document.getElementById('ccType').value;
-    const ccNumber = document.getElementById('ccNumber').value;
-    const ccExpiration = document.getElementById('ccExpiration').value;
-    const ccCVC = document.getElementById('ccCVC').value;
-    const customerEmail = document.getElementById('customerEmail').value;
+    const city = document.getElementById('city').value.trim();
+    const houseNumber = document.getElementById('houseNumber').value.trim();
+    const streetName = document.getElementById('streetName').value.trim();
+    const zipCode = document.getElementById('zipCode').value.trim();
+    const ccType = document.getElementById('ccType').value.trim();
+    const ccNumber = document.getElementById('ccNumber').value.trim();
+    const ccExpiration = document.getElementById('ccExpiration').value.trim();
+    const ccCVC = document.getElementById('ccCVC').value.trim();
+    const customerEmail = document.getElementById('customerEmail').value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const cityPattern = /^[a-zA-Z\s]+$/;
+    const streetPattern = /^[a-zA-Z\s]+$/;
+    const zipPattern = /^\d{7}$/;
+    const ccNumberPattern = /^\d{16}$/;
+    const ccCVCpattern = /^\d{3}$/;
+    const expirationPattern = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
 
     if (city === "" || houseNumber === "" || streetName === "" || zipCode === "" ||
         ccType === "" || ccNumber === "" || ccExpiration === "" || ccCVC === "" ||
         customerEmail === "") {
         alert("Please fill in all fields.");
+        return false;
+    }
+
+    if (!cityPattern.test(city)) {
+        alert("Please enter a valid city name (letters only).");
+        return false;
+    }
+
+    if (!streetPattern.test(streetName)) {
+        alert("Please enter a valid street name (letters only).");
+        return false;
+    }
+
+    if (!zipPattern.test(zipCode)) {
+        alert("Please enter a valid postal code (7 digits).");
+        return false;
+    }
+
+    if (!ccNumberPattern.test(ccNumber)) {
+        alert("Please enter a valid credit card number (16 digits).");
+        return false;
+    }
+
+    if (!expirationPattern.test(ccExpiration)) {
+        alert("Please enter a valid expiration date (MM/YY or MM/YYYY).");
+        return false;
+    }
+
+    if (!ccCVCpattern.test(ccCVC)) {
+        alert("Please enter a valid CVC number (3 digits).");
+        return false;
+    }
+
+    if (!emailPattern.test(customerEmail)) {
+        alert("Please enter a valid email address.");
         return false;
     }
 
