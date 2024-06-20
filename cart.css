@@ -71,7 +71,7 @@
     background-color: #BE82B4;
 }
 
-.checkout-button {
+#checkout-button {
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
@@ -81,6 +81,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.checkout-button:hover {
+#checkout-button:hover {
     background-color: #BE82B4;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="Checkout.css">
 </head>
 <body>
@@ -52,12 +52,16 @@
                     </select>
                     <label for="ccNumber">Card Number</label>
                     <input type="text" id="ccNumber" name="ccNumber" required>
-                    <label for="ccExpiration">Expiration Date</label>
-                    <input type="text" id="ccExpiration" name="ccExpiration" placeholder="MM/YYYY" required>
+                    <label for="ccExpirationMonth">Expiration Month:</label>
+                    <select id="ccExpirationMonth" name="ccExpirationMonth"></select>
+                    <label for="ccExpirationYear">Expiration Year:</label>
+                    <select id="ccExpirationYear" name="ccExpirationYear"></select>
                     <label for="ccCVC">CVC</label>
                     <input type="text" id="ccCVC" name="ccCVC" required>
                     <label for="customerEmail">Customer Email</label>
                     <input type="email" id="customerEmail" name="customerEmail" required>
+                    <div>Total Amount to Charge: $<span id="totalAmount"></span></div>
+
                 </div>
 
                 <div class="submit-button">
@@ -66,7 +70,7 @@
             </form>
         </div>
     </main>
-
+    <script src="shared.js"></script>
     <script src="checkout.js"></script>
 </body>
 </html>

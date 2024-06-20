@@ -55,3 +55,11 @@ button {
 button:hover {
     background-color: #BE82B4;
 }
+span#totalAmount {
+    font-weight: bold;
+    color: #917C14;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f2f2f2;
+    user-select: none; /* Prevent text selection */
+}

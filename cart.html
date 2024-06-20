@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="General.css">
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="Cart.css">
 </head>
 <body>
@@ -23,11 +23,11 @@
             <div id="cart-items" class="cart-items">
                 <!-- Cart items will be dynamically inserted here -->
             </div>
-            <div id="total-price">Total Price: $0</div>
-            <button class="checkout-button" onclick="window.location.href='checkout.html'">Checkout</button>
+            <div id="totalPrice"></div>
+            <button id="checkout-button" >Checkout</button>
         </div>
     </main>
-
+    <script src="shared.js"></script>
     <script src="cart.js"></script>
 </body>
 </html>

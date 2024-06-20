@@ -55,5 +55,24 @@ function updateTotalPrice(cartItems) {
     cartItems.forEach(item => {
         totalPrice += (item.price * item.quantity);
     });
-    document.getElementById('total-price').innerText = `Total Price: $${totalPrice}`;
+    document.getElementById('totalPrice').innerText = `Total Price: $${totalPrice}`;
+        // Store total price in localStorage
+    localStorage.setItem('totalPrice', totalPrice.toFixed(2));
+
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const checkoutButton = document.getElementById('checkout-button');
+
+    checkoutButton.addEventListener('click', function(event) {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+        if (cartItems.length === 0) {
+            alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
+            event.preventDefault(); // Prevent navigation to the checkout page
+            return false; // Return false to ensure the function exits
+        } else {
+            // Redirect to checkout page
+            window.location.href = 'checkout.html';
+        }
+    });
+});
+

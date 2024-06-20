@@ -39,11 +39,8 @@ function buyNow() {
     // Store the cake details in sessionStorage
     sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
 
-    // Proceed with adding the cake to the cart
-    alert("Cake added to cart successfully!");
-
     // Redirect to cart.html
-    window.location.href = 'cart.html';
+    window.location.href = 'checkout.html';
 
 }
 
@@ -54,8 +51,8 @@ function addToCart() {
     var inscription = document.getElementById("inscription").value;
     var quantity = parseInt(document.getElementById("quantity").value);
 
-    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity <= 0) {
-        alert("Please fill in all fields.");
+    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity <= 1) {
+        alert("Please fill in quantity.");
         return;
     }
 
@@ -70,11 +67,17 @@ function addToCart() {
         quantity: quantity,
         price: 100 // Example price, replace with actual logic
     };
+ if (quantity >= 1) {
 
-    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    cartItems.push(cake);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    alert("Cake added to cart successfully!");
+     var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+     cartItems.push(cake);
+     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+     alert("Cake added to cart successfully!");
+
+ }
+ else
+     alert("Please fill in quantity.");
+        return;
 }
 
 

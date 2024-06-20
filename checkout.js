@@ -2,10 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutForm = document.getElementById('checkout-form');
     const orderIdInput = document.getElementById('orderId');
     const orderDateInput = document.getElementById('orderDate');
+    const monthSelect = document.getElementById('ccExpirationMonth');
+    const yearSelect = document.getElementById('ccExpirationYear');
 
     // Set order ID and order date when the DOM is loaded
     orderIdInput.value = generateOrderId();
     orderDateInput.value = getCurrentDate();
+
+    // Populate month and year dropdowns
+    populateExpirationDateOptions(monthSelect, yearSelect);
 
     checkoutForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
@@ -20,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const zipCode = document.getElementById('zipCode').value;
             const ccType = document.getElementById('ccType').value;
             const ccNumber = document.getElementById('ccNumber').value;
-            const ccExpiration = document.getElementById('ccExpiration').value;
+            const ccExpirationMonth = monthSelect.value;
+            const ccExpirationYear = yearSelect.value;
             const ccCVC = document.getElementById('ccCVC').value;
             const customerEmail = document.getElementById('customerEmail').value;
 
@@ -34,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zipCode,
                 ccType,
                 ccNumber,
-                ccExpiration,
+                ccExpiration: `${ccExpirationMonth}/${ccExpirationYear}`,
                 ccCVC,
                 customerEmail
             };
@@ -52,6 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function populateExpirationDateOptions(monthSelect, yearSelect) {
+    // Populate months
+    for (let month = 1; month <= 12; month++) {
+        const option = document.createElement('option');
+        option.value = month < 10 ? `0${month}` : month;
+        option.text = month < 10 ? `0${month}` : month;
+        monthSelect.appendChild(option);
+    }
+
+    // Populate years
+    const currentYear = new Date().getFullYear();
+    for (let year = currentYear; year <= currentYear + 20; year++) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.text = year;
+        yearSelect.appendChild(option);
+    }
+}
+
 function validateForm() {
     const city = document.getElementById('city').value.trim();
     const houseNumber = document.getElementById('houseNumber').value.trim();
@@ -59,20 +84,20 @@ function validateForm() {
     const zipCode = document.getElementById('zipCode').value.trim();
     const ccType = document.getElementById('ccType').value.trim();
     const ccNumber = document.getElementById('ccNumber').value.trim();
-    const ccExpiration = document.getElementById('ccExpiration').value.trim();
+    const ccExpirationMonth = document.getElementById('ccExpirationMonth').value;
+    const ccExpirationYear = document.getElementById('ccExpirationYear').value;
     const ccCVC = document.getElementById('ccCVC').value.trim();
     const customerEmail = document.getElementById('customerEmail').value.trim();
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const cityPattern = /^[a-zA-Z\s]+$/;
-    const streetPattern = /^[a-zA-Z\s]+$/;
+    const cityPattern = /^[\p{L}\s]+$/u;
+    const streetPattern = /^[\p{L}\s]+$/u;
     const zipPattern = /^\d{7}$/;
     const ccNumberPattern = /^\d{16}$/;
     const ccCVCpattern = /^\d{3}$/;
-    const expirationPattern = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
 
     if (city === "" || houseNumber === "" || streetName === "" || zipCode === "" ||
-        ccType === "" || ccNumber === "" || ccExpiration === "" || ccCVC === "" ||
+        ccType === "" || ccNumber === "" || ccExpirationMonth === "" || ccExpirationYear === "" || ccCVC === "" ||
         customerEmail === "") {
         alert("Please fill in all fields.");
         return false;
@@ -98,11 +123,6 @@ function validateForm() {
         return false;
     }
 
-    if (!expirationPattern.test(ccExpiration)) {
-        alert("Please enter a valid expiration date (MM/YY or MM/YYYY).");
-        return false;
-    }
-
     if (!ccCVCpattern.test(ccCVC)) {
         alert("Please enter a valid CVC number (3 digits).");
         return false;
@@ -113,7 +133,18 @@ function validateForm() {
         return false;
     }
 
+    if (!isValidExpirationDate(ccExpirationMonth, ccExpirationYear)) {
+        alert("Please enter a valid expiration date (later than the current date).");
+        return false;
+    }
+
     return true;
+}
+
+function isValidExpirationDate(month, year) {
+    const now = new Date();
+    const expirationDate = new Date(year, month - 1); // Month is zero-indexed
+    return expirationDate > now;
 }
 
 function generateOrderId() {
@@ -128,3 +159,8 @@ function getCurrentDate() {
     const day = String(now.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
 }
+// Retrieve total price from localStorage
+const totalPrice = localStorage.getItem('totalPrice') || '0.00';
+
+// Display total price in the tag
+document.getElementById('totalAmount').textContent = totalPrice;
