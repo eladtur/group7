@@ -2,63 +2,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewForm = document.getElementById('review-form');
     const reviewsContainer = document.querySelector('.reviews');
 
-    // Sample reviews data
-    const reviews = [
-        { name: 'Alex', email: 'alex@example.com', message: 'Wow Wow Wow!!!', rating: 4, date: '2023-06-20' },
-        { name: 'Shira', email: 'shira@example.com', message: 'Wow Wow Wow!!!', rating: 4, date: '2023-06-21' },
-        { name: 'Jack', email: 'jack@example.com', message: 'Wow Wow Wow!!!', rating: 4, date: '2023-06-22' },
+    const preExistingReviews = [
+        {
+            name: "John Doe",
+            email: "john@example.com",
+            message: "Great cakes and excellent service!",
+            rating: 5,
+            date: "01/10/2023"
+        },
+        {
+            name: "Jane Smith",
+            email: "jane@example.com",
+            message: "I loved the chocolate cake!",
+            rating: 4,
+            date: "02/10/2023"
+        }
     ];
 
-    // Function to render reviews
-    function renderReviews() {
+    if (!localStorage.getItem('reviews')) {
+        localStorage.setItem('reviews', JSON.stringify(preExistingReviews));
+    }
+
+    const loadReviews = () => {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
         reviewsContainer.innerHTML = '';
         reviews.forEach(review => {
-            const reviewElement = document.createElement('div');
-            reviewElement.classList.add('review');
-            reviewElement.innerHTML = `
-                <div class="review-header">
-                    <span class="name">${review.name}</span>
-                    <div class="rating">${renderRating(review.rating)}</div>
+            const reviewHTML = `
+                <div class="review">
+                    <div class="review-header">
+                        <span class="name">${review.name}</span>
+                        <div class="rating">
+                            ${'★'.repeat(review.rating).padEnd(5, '☆')}
+                        </div>
+                    </div>
+                    <div class="date">${review.date}</div>
+                    <div class="message">${review.message}</div>
                 </div>
-                <span class="date">${review.date}</span>
-                <div class="message">${review.message}</div>
             `;
-            reviewsContainer.appendChild(reviewElement);
+            reviewsContainer.innerHTML += reviewHTML;
         });
-    }
+    };
 
-    // Function to render rating stars
-    function renderRating(rating) {
-        let stars = '';
-        for (let i = 1; i <= 5; i++) {
-            if (i <= rating) {
-                stars += '<img src="pics/star-filled.png" alt="Star">';
-            } else {
-                stars += '<img src="pics/star-empty.png" alt="Star">';
-            }
-        }
-        return stars;
-    }
-
-    // Event listener for form submission
-    reviewForm.addEventListener('submit', (event) => {
+    reviewForm.addEventListener('submit', function(event) {
         event.preventDefault();
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        const rating = document.getElementById('rating').value;
-        const date = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
+        const rating = document.querySelector('input[name="rating"]:checked').value;
 
-        if (name && email && message && rating) {
-            const newReview = { name, email, message, rating: parseInt(rating), date };
-            reviews.push(newReview);
-            renderReviews();
-            reviewForm.reset();
-        } else {
-            alert('All fields are required!');
-        }
+        const newReview = {
+            name,
+            email,
+            message,
+            rating: parseInt(rating),
+            date: new Date().toLocaleDateString()
+        };
+
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.unshift(newReview); // Add the new review to the top
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+
+        document.getElementById('message').value = '';
+        document.querySelector('input[name="rating"]:checked').checked = false;
+
+        loadReviews();
     });
 
-    // Initial render of reviews
-    renderReviews();
+    loadReviews();
 });

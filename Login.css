@@ -63,7 +63,7 @@ nav .menu li {
     border-left: 1px solid black;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    flex: 1; /* Ensures that all li elements take equal space */
+    flex: 1;
     text-align: center;
 }
 
@@ -83,23 +83,23 @@ nav .menu li:last-child {
 
 nav .menu li a:hover {
     background-color: #DBBDD7;
-    color: #917C14; /* Ensure text color on hover */
+    color: #917C14;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px); /* Adjust height to take into account the top bar and prevent scroll */
+    height: calc(100vh - 80px);
     width: 100%;
-    margin-top: -20px; /* Shift the box up slightly to prevent scroll */
+    margin-top: -20px;
 }
 
 .login-container {
     max-width: 400px;
-    width: 100%; /* Ensure the box width is the same as before */
+    width: 100%;
     margin: 0 auto;
-    padding: 10px 20px 10px 20px; /* Reduce top padding */
+    padding: 10px 20px 10px 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -107,16 +107,16 @@ main {
 }
 
 .login-container img.logo {
-    margin: 0 auto; /* Remove margin at the top of the logo */
+    margin: 0 auto;
     width: 100px;
-    padding-top: 0; /* Ensure no padding at the top of the image */
+    padding-top: 0;
 }
 
 .main-title {
     font-family: 'Bernard MT Condensed', sans-serif;
     font-size: 1.5em;
     color: #CC9900;
-    margin: 5px 0; /* Adjust margin to reduce space between the logo and title */
+    margin: 5px 0;
 }
 
 .sub-title {
@@ -134,7 +134,7 @@ main {
 }
 
 .login-container input {
-    width: 90%; /* Make the input fields a bit smaller to be clearly within the container */
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -147,7 +147,7 @@ main {
 .button-group {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0; /* Remove extra space at the bottom */
+    margin-bottom: 0;
 }
 
 .button-group button {

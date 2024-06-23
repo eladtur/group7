@@ -10,13 +10,11 @@
 <body>
     <div id="shared-content"></div>
     <script>
-        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('shared-content').innerHTML = html;
 
-                // Remove the top logo for the login page
                 const topLogo = document.getElementById('top-logo');
                 if (topLogo) {
                     topLogo.style.display = 'none';
@@ -36,13 +34,12 @@
                 <input type="password" id="password" name="password" required>
 
                 <div class="button-group">
-                    <button type="button" id="signInButton">Sign IN</button>
                     <button type="submit" id="loginButton">Log In</button>
+                    <button type="button" id="signInButton">Sign IN</button>
                 </div>
             </form>
         </div>
     </main>
-    <script src="shared.js"></script>
     <script src="login.js"></script>
 </body>
 </html>

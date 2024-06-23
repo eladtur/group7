@@ -110,7 +110,8 @@ const cakes = [
   }
 ];
 
-// Function to create a cake item HTML
+
+
 function createCakeItem(cake) {
   const cakeItem = document.createElement('div');
   cakeItem.className = 'cake-item';
@@ -126,9 +127,6 @@ function createCakeItem(cake) {
   cakePrice.className = 'price';
   cakePrice.textContent = `$${cake.price}`;
 
-  // const cakeDescription = document.createElement('p');
-  // cakeDescription.textContent = cake.description;
-
   const customizeButton = document.createElement('button');
   customizeButton.textContent = 'Customize Cake';
   customizeButton.addEventListener('click', () => {
@@ -141,14 +139,12 @@ function createCakeItem(cake) {
   cakeItem.appendChild(cakeImage);
   cakeItem.appendChild(cakeName);
   cakeItem.appendChild(cakePrice);
-  // cakeItem.appendChild(cakeDescription);
   cakeItem.appendChild(customizeButton);
 
   return cakeItem;
 }
 
 
-// Function to render the catalog
 function renderCatalog() {
   const catalog = document.getElementById('cake-catalog');
   cakes.forEach(cake => {
@@ -157,5 +153,4 @@ function renderCatalog() {
   });
 }
 
-// Call renderCatalog when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', renderCatalog);

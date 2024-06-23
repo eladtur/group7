@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const orderDetails = JSON.parse(sessionStorage.getItem('orderDetails'));
 
@@ -7,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayErrorMessage();
     }
 
-    // Clear the cart after displaying order details
     clearCart();
 });
 
@@ -28,8 +28,6 @@ function displayErrorMessage() {
 }
 
 function clearCart() {
-    // Clear the cart data from localStorage
     localStorage.removeItem('cartItems');
-    // Debugging: Check if the cart is cleared
     console.log('Cart contents after clearing:', localStorage.getItem('cartItems'));
 }

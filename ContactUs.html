@@ -10,11 +10,28 @@
 <body>
     <div id="shared-content"></div>
     <script>
-        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('shared-content').innerHTML = html;
+
+                const userFullName = document.getElementById('user-full-name');
+                const signOutLink = document.getElementById('sign-out-link');
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+                if (user) {
+                    userFullName.textContent = user.fullName;
+                    signOutLink.style.display = 'inline';
+
+                    document.getElementById('name').value = user.fullName;
+                    document.getElementById('email').value = user.email;
+                    document.getElementById('phone').value = user.phone;
+                }
+
+                signOutLink.addEventListener('click', () => {
+                    localStorage.removeItem('loggedInUser');
+                    window.location.href = 'Home.html';
+                });
             });
     </script>
 
@@ -39,7 +56,6 @@
                 </form>
             </div>
             <div class="contact-info">
-                <!-- Embed Google Maps centered on Tel Aviv -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13420.088624175162!2d34.7818!3d32.0853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b78c7258b7d%3A0x689d71afda6a8ae4!2sTel+Aviv%2C+Israel!5e0!3m2!1sen!2sil!4v1620901005000!5m2!1sen!2sil" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 <p>First block Tel Aviv</p>
                 <p>077-686787</p>

@@ -10,7 +10,6 @@
 <body>
     <div id="shared-content"></div>
     <script>
-        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
@@ -44,7 +43,6 @@
         </div>
     </main>
 
-    <script src="shared.js"></script>
-    <script src="CreateAccount.js"></script>
+    <script type="module" src="CreateAccount.js"></script>
 </body>
 </html>

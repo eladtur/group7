@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="Profile.css">
 </head>
 <body>
     <div id="shared-content"></div>
     <script>
-        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
@@ -36,7 +35,6 @@
             <div class="orders-section">
                 <h2>Your Orders</h2>
                 <div class="orders-container" id="orders-container">
-                    <!-- Orders will be dynamically inserted here -->
                 </div>
             </div>
         </div>

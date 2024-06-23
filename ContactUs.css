@@ -6,13 +6,13 @@
 }
 
 .contact-form {
-    width: 60%; /* Increase the width */
+    width: 60%;
     background: #fff;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 0; /* Align with the logo */
+    margin-top: 0;
 }
 
 .contact-form h1 {
@@ -23,23 +23,23 @@
 }
 
 .contact-form label {
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+    font-family: 'Arial', sans-serif;
     color: #CC9900;
     display: block;
     margin-top: 10px;
-    width: 100%; /* Make the labels take full width */
+    width: 100%;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: calc(100% - 20px); /* Ensure padding on both sides */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
 }
 
 .contact-form button {
@@ -50,7 +50,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+    font-family: 'Arial', sans-serif;
     font-size: 18px;
     margin-top: 10px;
 }
@@ -61,20 +61,20 @@
 }
 
 .contact-info {
-    width: 35%; /* Adjust width to maintain overall layout */
+    width: 35%;
     text-align: center;
 }
 
 .contact-info iframe {
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 300px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info p {
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
+    font-family: 'Arial', sans-serif;
     color: #CC9900;
     margin-top: 10px;
 }

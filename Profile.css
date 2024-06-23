@@ -1,81 +1,55 @@
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-.profile-form {
-    width: 50%; /* Adjust width as needed */
-    background: #fff;
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
+    background: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 0; /* Align with the logo */
 }
 
-.profile-form h1 {
+.profile-form, .orders-section {
+    margin-bottom: 20px;
+}
+
+.profile-form h1, .orders-section h2 {
     font-family: 'Bernard MT Condensed', sans-serif;
     color: #CC9900;
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .profile-form label {
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
-    color: #CC9900;
     display: block;
+    color: #CC9900;
     margin-top: 10px;
-    width: 100%; /* Make the labels take full width */
 }
 
 .profile-form input {
-    width: calc(100% - 20px); /* Ensure padding on both sides */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Arial', sans-serif; /* Matching the navigation bar font */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-}
-
-.orders-section {
-    width: 50%;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.orders-section h2 {
-    font-family: 'Bernard MT Condensed', sans-serif;
-    color: #CC9900;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .orders-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .order {
-    width: 30%;
-    margin: 10px;
-    text-align: center;
-}
-
-.order img {
-    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.order p {
-    font-family: 'Arial', sans-serif;
-    color: #CC9900;
-    margin-top: 10px;
+    border-radius: 5px;
 }

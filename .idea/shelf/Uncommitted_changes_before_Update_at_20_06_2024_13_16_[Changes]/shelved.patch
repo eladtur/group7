@@ -1,0 +1,83 @@
+Index: General.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/General.css b/shared.css
+rename from General.css
+rename to shared.css
+--- a/General.css	
++++ b/shared.css	
+@@ -1,4 +1,4 @@
+-/* General.css */
++/* shared.css */
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+ 
+ body {
+@@ -8,14 +8,15 @@
+     padding: 0;
+     color: #CC9900; /* Paragraph font color */
+ }
+-  .scroll-option {
+-      position: fixed;
+-      bottom: 20px;
+-      right: 20px;
+-      z-index: 999; /* Ensure it's above other content */
+-
+-  }
+-      header {
++
++.scroll-option {
++    position: fixed;
++    bottom: 20px;
++    right: 20px;
++    z-index: 999; /* Ensure it's above other content */
++}
++
++header {
+     position: fixed;
+     width: 100%;
+     top: 0;
+@@ -23,6 +24,7 @@
+     z-index: 1000;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
++
+ .top-bar {
+     display: flex;
+     justify-content: center;
+@@ -47,6 +49,7 @@
+     flex: 1;
+     text-align: center;
+ }
++
+ .logo {
+     display: block;
+     text-align: center;
+@@ -94,6 +97,7 @@
+     background-color: #DBBDD7;
+     color: #917C14; /* Ensure text color on hover */
+ }
++
+ .logo {
+     padding-top: 150px;
+ }
+@@ -101,3 +105,18 @@
+ main {
+     padding-top: 100px; /* Ensure content does not overlap with the header */
+ }
++
++/* Add this CSS for the sign-out link */
++#sign-out-link {
++    font-family: 'Open Sans', sans-serif;
++    color: #917C14; /* Same color as the rest of the navigation bar */
++    text-decoration: underline;
++    background-color: transparent; /* Remove background color */
++    padding: 10px 15px;
++    border-radius: 0; /* Remove border radius */
++}
++
++#sign-out-link:hover {
++    color: #CC9900; /* Change color on hover */
++    background-color: transparent; /* Ensure no background color on hover */
++}

@@ -10,11 +10,24 @@
 <body>
     <div id="shared-content"></div>
     <script>
-        // Fetch and include the shared content
         fetch('shared.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('shared-content').innerHTML = html;
+
+                const userFullName = document.getElementById('user-full-name');
+                const signOutLink = document.getElementById('sign-out-link');
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+                if (user) {
+                    userFullName.textContent = user.fullName;
+                    signOutLink.style.display = 'inline';  // Show the "Sign Out" link
+                }
+
+                signOutLink.addEventListener('click', () => {
+                    localStorage.removeItem('loggedInUser');
+                    window.location.href = 'Login.html';
+                });
             });
     </script>
 
@@ -22,10 +35,11 @@
         <div class="confirmation-section">
             <h1>Order Confirmation</h1>
             <div id="confirmation-message">
-                <!-- Order details will be displayed here -->
+                <p>Your order has been placed successfully!</p>
             </div>
         </div>
     </main>
+
     <script src="shared.js"></script>
     <script src="confirmation.js"></script>
 </body>

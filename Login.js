@@ -1,30 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
-    const signInButton = document.getElementById('signInButton');
-    const loginButton = document.getElementById('loginButton');
-
-    loginForm.addEventListener('submit', function (event) {
+    loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        // Here you would typically send the login data to the server
-        // For the sake of this example, let's just create a User object and log it to the console
+        const users = JSON.parse(localStorage.getItem('users')) || [];
 
-        const user = {
-            email: email,
-            password: password
-        };
+        const user = users.find(user => user.email === email);
 
-        console.log('User logged in:', user);
-
-        // Redirect to home page or another action
-        window.location.href = 'home.html';
+        if (user) {
+            if (user.password === password) {
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                window.location.href = 'Home.html';
+            } else {
+                alert('Invalid Password');
+            }
+        } else {
+            alert('User does not exist. Please sign in first.');
+        }
     });
 
-    signInButton.addEventListener('click', function () {
-        // Redirect to sign up page or another action
-        window.location.href = 'signup.html';
+    document.getElementById('signInButton').addEventListener('click', () => {
+        window.location.href = 'CreateAccount.html';
     });
 });

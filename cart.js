@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartItems.forEach((item, index) => {
             const cartItemHTML = `
                 <div class="cart-item" data-id="${item.id}">
-                    <img src="${item.image}" alt="Cake Image">
+                    <img src="${item.image}" alt="Cake Image" style="width: 100px; height: 100px;">
                     <div class="cart-details">
                         <h3>${item.name}</h3>
                         <p>Base: ${item.base}</p>
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <label for="quantity${index}">Quantity</label>
                             <input type="number" id="quantity${index}" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)">
                         </div>
-                        <p class="price">Price: $${item.price * item.quantity}</p>
+                        <p class="price">Price: $${(item.price * item.quantity).toFixed(2)}</p>
                         <button class="remove-button" onclick="removeFromCart(${item.id})">Remove</button>
                     </div>
                 </div>
@@ -53,26 +53,60 @@ function removeFromCart(id) {
 function updateTotalPrice(cartItems) {
     let totalPrice = 0;
     cartItems.forEach(item => {
-        totalPrice += (item.price * item.quantity);
+        totalPrice += item.price * item.quantity;
     });
-    document.getElementById('totalPrice').innerText = `Total Price: $${totalPrice}`;
-        // Store total price in localStorage
+    document.getElementById('totalPrice').innerText = `Total Price: $${totalPrice.toFixed(2)}`;
+    // Store total price in localStorage
     localStorage.setItem('totalPrice', totalPrice.toFixed(2));
-
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     const checkoutButton = document.getElementById('checkout-button');
+    const buyNowButton = document.getElementById('buy-now-button');
 
     checkoutButton.addEventListener('click', function(event) {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
-        if (cartItems.length === 0) {
-            alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
-            event.preventDefault(); // Prevent navigation to the checkout page
-            return false; // Return false to ensure the function exits
-        } else {
-            // Redirect to checkout page
-            window.location.href = 'checkout.html';
-        }
+        handleOrder(event, 'checkout');
     });
+
+    if (buyNowButton) {
+        buyNowButton.addEventListener('click', function(event) {
+            handleOrder(event, 'buy-now');
+        });
+    }
 });
 
+function handleOrder(event, type) {
+    event.preventDefault();
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    if (cartItems.length === 0) {
+        alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
+        return false;
+    } else {
+
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (user) {
+            let userOrders = JSON.parse(localStorage.getItem(`orders_${user.email}`)) || [];
+            const orderDetails = {
+                orderId: generateOrderId(),
+                date: new Date().toISOString().split('T')[0],
+                items: cartItems,
+                totalPrice: localStorage.getItem('totalPrice')
+            };
+            userOrders.push(orderDetails);
+            localStorage.setItem(`orders_${user.email}`, JSON.stringify(userOrders));
+        }
+        localStorage.setItem('cartItems', JSON.stringify([]));
+
+        localStorage.setItem('currentOrder', JSON.stringify(cartItems));
+
+        if (type === 'checkout') {
+            window.location.href = 'checkout.html';
+        } else {
+            window.location.href = 'confirmation.html';
+        }
+    }
+}
+
+function generateOrderId() {
+    return Math.floor(Math.random() * 1000000) + 1;
+}

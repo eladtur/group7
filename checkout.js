@@ -5,18 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthSelect = document.getElementById('ccExpirationMonth');
     const yearSelect = document.getElementById('ccExpirationYear');
 
-    // Set order ID and order date when the DOM is loaded
     orderIdInput.value = generateOrderId();
     orderDateInput.value = getCurrentDate();
 
-    // Populate month and year dropdowns
     populateExpirationDateOptions(monthSelect, yearSelect);
 
     checkoutForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
 
         if (validateForm()) {
-            // Retrieve form data
             const orderId = orderIdInput.value;
             const orderDate = orderDateInput.value;
             const city = document.getElementById('city').value;
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const ccCVC = document.getElementById('ccCVC').value;
             const customerEmail = document.getElementById('customerEmail').value;
 
-            // Create order details object
             const orderDetails = {
                 orderId,
                 orderDate,
@@ -45,14 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 customerEmail
             };
 
-            // Store order details in sessionStorage
             sessionStorage.setItem('orderDetails', JSON.stringify(orderDetails));
 
-            // Clear cart items from localStorage
             localStorage.removeItem('cartItems');
             console.log('Cart contents after clearing:', localStorage.getItem('cartItems'));
 
-            // Redirect to confirmation page
             window.location.href = 'confirmation.html';
         }
     });
@@ -143,7 +136,7 @@ function validateForm() {
 
 function isValidExpirationDate(month, year) {
     const now = new Date();
-    const expirationDate = new Date(year, month - 1); // Month is zero-indexed
+    const expirationDate = new Date(year, month - 1);
     return expirationDate > now;
 }
 
@@ -152,15 +145,48 @@ function generateOrderId() {
 }
 
 function getCurrentDate() {
-    // Get current date formatted as yyyy-mm-dd
     const now = new Date();
     const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Month is zero indexed
+    const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
 }
-// Retrieve total price from localStorage
 const totalPrice = localStorage.getItem('totalPrice') || '0.00';
 
-// Display total price in the tag
 document.getElementById('totalAmount').textContent = totalPrice;
+
+
+
+function handleOrder(event) {
+    event.preventDefault();
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    if (cartItems.length === 0) {
+        alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
+        return false;
+    } else {
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (user) {
+            let userOrders = JSON.parse(localStorage.getItem(`orders_${user.email}`)) || [];
+            cartItems.forEach(item => {
+                userOrders.push({
+                    id: item.id,
+                    name: item.name,
+                    base: item.base,
+                    cream: item.cream,
+                    dietaryPreference: item.dietaryPreference,
+                    inscription: item.inscription,
+                    quantity: item.quantity,
+                    price: item.price,
+                    image: item.image
+                });
+            });
+            localStorage.setItem(`orders_${user.email}`, JSON.stringify(userOrders));
+        }
+        localStorage.setItem('cartItems', JSON.stringify([]));
+
+        localStorage.setItem('currentOrder', JSON.stringify(cartItems));
+
+        window.location.href = 'confirmation.html';
+    }
+}
+
