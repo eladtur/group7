@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Catalog</title>
+    <link rel="stylesheet" href="../../shared/static/css/shared.css">
+    <link rel="stylesheet" href="../static/css/Catalog.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="left-icons">
+                <a href="../../Profile/templates/Profile.html"><img src="../../../pics/user.png" height="16" width="16" alt="User Icon"/></a>
+                <a href="../../cart/templates/cart.html"><img src="../../../pics/shopping-cart.png" height="16" width="16" alt="Shopping Cart Icon"/></a>
+                <a href="#" id="sign-out-link" style="display: none; margin-left: 10px;">Sign Out</a>
+            </div>
+            <div class="right-icons">
+                <span id="user-full-name"></span>
+            </div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="../../home/templates/home.html">Home</a></li>
+                <li><a href="catalog.html">Cakes Catalog</a></li>
+                <li><a href="../../SetAppointment/templates/SetAppointment.html">Set an Appointment</a></li>
+                <li><a href="../../Review/templates/Review.html">Review</a></li>
+                <li><a href="../../ContactUs/templates/ContactUs.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="logo" id="top-logo">
+        <img src="../../../pics/wedding-cake-logo.png" height="100" width="100" alt="Logo"/>
+        <div>S&E Luxury Wedding Cakes</div>
+    </div>
+
+    <main>
+        <h1>Cake Catalog</h1>
+        <div id="cake-catalog" class="catalog"></div>
+    </main>
+
+    <div class="scroll-option">
+        <button onclick="scrollToTop()">Scroll to Top</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userFullName = document.getElementById('user-full-name');
+            const signOutLink = document.getElementById('sign-out-link');
+            const profileIcon = document.querySelector('.left-icons a[href="Profile.html"]');
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+            if (user) {
+                userFullName.textContent = user.fullName;
+                signOutLink.style.display = 'inline';
+            } else {
+                signOutLink.style.display = 'none';
+            }
+
+            signOutLink.addEventListener('click', () => {
+                localStorage.removeItem('loggedInUser');
+                window.location.href = 'login.html';
+            });
+
+            profileIcon.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (user) {
+                    window.location.href = 'Profile.html';
+                } else {
+                    window.location.href = 'login.html';
+                }
+            });
+        });
+    </script>
+    <script src="../../shared/static/js/shared.js"></script>
+    <script src="../static/js/catalog.js"></script>
+</body>
+</html>

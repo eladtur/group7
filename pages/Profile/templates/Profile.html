@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../shared/static/css/shared.css">
+    <link rel="stylesheet" href="../static/css/Profile.css">
+</head>
+<body>
+    <div id="shared-content"></div>
+    <script>
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+            });
+    </script>
+
+    <main>
+        <div class="profile-container">
+            <div class="profile-form">
+                <h1>My Profile</h1>
+                <form id="profile-form">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" readonly>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" readonly>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" readonly>
+                </form>
+            </div>
+            <div class="orders-section">
+                <h2>Your Orders</h2>
+                <div class="orders-container" id="orders-container">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../shared/static/js/shared.js"></script>
+    <script src="../static/js/Profile.js"></script>
+</body>
+</html>

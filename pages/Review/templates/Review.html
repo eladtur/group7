@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="../../shared/static/css/shared.css">
+    <link rel="stylesheet" href="../static/css/Review.css">
+</head>
+<body>
+    <div id="shared-content"></div>
+    <script>
+        fetch('shared.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('shared-content').innerHTML = html;
+
+                const userFullName = document.getElementById('user-full-name');
+                const signOutLink = document.getElementById('sign-out-link');
+                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+                if (user) {
+                    userFullName.textContent = user.fullName;
+                    signOutLink.style.display = 'inline';
+
+                    document.getElementById('name').value = user.fullName;
+                    document.getElementById('email').value = user.email;
+                }
+
+                signOutLink.addEventListener('click', () => {
+                    localStorage.removeItem('loggedInUser');
+                    window.location.href = 'Home.html';
+                });
+            });
+    </script>
+
+    <main>
+        <div class="review-container">
+            <h1>Hear from our customers</h1>
+            <div class="reviews">
+            </div>
+            <div class="add-review">
+                <h2>Add a Review</h2>
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Review*</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating*</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+                        </div>
+                    </div>
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../shared/static/js/shared.js"></script>
+    <script src="../static/js/Review.js"></script>
+</body>
+</html>

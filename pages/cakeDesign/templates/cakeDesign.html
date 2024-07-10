@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cake Page</title>
+    <link rel="stylesheet" href="../../shared/static/css/shared.css">
+    <link rel="stylesheet" href="../static/css/cakeDesign.css">
+</head>
+<body>
+<div id="shared-content"></div>
+<script>
+    fetch('shared.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('shared-content').innerHTML = html;
+        });
+</script>
+
+<main>
+    <div id="cake-details" class="cake-details"></div>
+    <div class="customize">
+        <h2>Customize your cake</h2>
+        <form>
+            <label for="cake-base">Cake Base</label>
+            <select id="cake-base">
+                <option>Vanilla</option>
+                <option>Chocolate</option>
+                <option>Lemon</option>
+                <option>Coconut</option>
+                <option>Pistachio</option>
+                <option>Caramel</option>
+                <option>Red velvet</option>
+                <option>Strawberry</option>
+                <option>Coffee</option>
+                <option>Carrot</option>
+            </select>
+            <label for="cream">Cream</label>
+            <select id="cream">
+                <option>Buttercream</option>
+                <option>Strawberry</option>
+                <option>Ganache</option>
+                <option>Cream cheese</option>
+                <option>Lemon</option>
+                <option>Raspberry</option>
+                <option>Chocolate</option>
+            </select>
+            <label for="dietary-preference">Dietary Preference</label>
+            <select id="dietary-preference">
+                <option>Dairy</option>
+                <option>Vegan</option>
+                <option>Dairy Free</option>
+            </select>
+            <label for="inscription">Inscription</label>
+            <input type="text" id="inscription">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" min="1">
+            <button type="button" onclick="buyNow()">Buy it now</button>
+            <button type="button" onclick="addToCart()">Add to Shopping Cart</button>
+        </form>
+    </div>
+</main>
+
+<script src="../../shared/static/js/shared.js"></script>
+<script src="../static/js/cakeDesign.js"></script>
+
+</body>
+</html>
