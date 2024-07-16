@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (user) {
             if (user.password === password) {
                 localStorage.setItem('loggedInUser', JSON.stringify(user));
-                window.location.href = 'home.html';
+                window.location.href = '/home';
             } else {
                 alert('Invalid Password');
             }
@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('signInButton').addEventListener('click', () => {
-        window.location.href = 'CreateAccount.html';
+        window.location.href = '/CreateAccount';
     });
 });

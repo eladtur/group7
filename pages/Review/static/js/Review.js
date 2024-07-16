@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
         reviews.unshift(newReview); // Add the new review to the top
         localStorage.setItem('reviews', JSON.stringify(reviews));
 
-        document.getElementById('message').value = '';
-        document.querySelector('input[name="rating"]:checked').checked = false;
+        // Clear form fields
+        reviewForm.reset();
 
         loadReviews();
     });

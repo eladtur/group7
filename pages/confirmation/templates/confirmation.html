@@ -1,46 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Confirmation</title>
-    <link rel="stylesheet" href="../../shared/static/css/shared.css">
-    <link rel="stylesheet" href="Confirmation.css">
-</head>
-<body>
-    <div id="shared-content"></div>
-    <script>
-        fetch('shared.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('shared-content').innerHTML = html;
-
-                const userFullName = document.getElementById('user-full-name');
-                const signOutLink = document.getElementById('sign-out-link');
-                const user = JSON.parse(localStorage.getItem('loggedInUser'));
-
-                if (user) {
-                    userFullName.textContent = user.fullName;
-                    signOutLink.style.display = 'inline';  // Show the "Sign Out" link
-                }
-
-                signOutLink.addEventListener('click', () => {
-                    localStorage.removeItem('loggedInUser');
-                    window.location.href = 'Login.html';
-                });
-            });
-    </script>
-
-    <main>
-        <div class="confirmation-section">
-            <h1>Order Confirmation</h1>
-            <div id="confirmation-message">
-                <p>Your order has been placed successfully!</p>
-            </div>
+{% extends 'shared.html' %}
+{% set page_head_title = 'Order Confirmation' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('confirmation.static', filename='css/confirmation.css') }}">
+{% endblock %}
+{% block page_body_main_content %}
+<main>
+    <div class="confirmation-section">
+        <h1>Order Confirmation</h1>
+        <div id="confirmation-message">
+            <p>Your order has been placed successfully!</p>
         </div>
-    </main>
+    </div>
+</main>
+{% endblock %}
+{% block page_body_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const userFullName = document.getElementById('user-full-name');
+        const signOutLink = document.getElementById('sign-out-link');
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
 
-    <script src="../../shared/static/js/shared.js"></script>
-    <script src="../static/js/confirmation.js"></script>
-</body>
-</html>
+        if (user) {
+            userFullName.textContent = user.fullName;
+            signOutLink.style.display = 'inline';  // Show the "Sign Out" link
+        }
+
+        signOutLink.addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = '{{ url_for("Login.Login_page") }}';
+        });
+    });
+</script>
+<script src="{{ url_for('static', filename='js/shared.js') }}"></script>
+<script src="{{ url_for('confirmation.static', filename='js/confirmation.js') }}"></script>
+{% endblock %}

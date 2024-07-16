@@ -1,69 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="../../shared/static/css/shared.css">
-    <link rel="stylesheet" href="../static/css/ContactUs.css">
-</head>
-<body>
-    <div id="shared-content"></div>
-    <script>
-        fetch('shared.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('shared-content').innerHTML = html;
+{% extends 'shared.html' %}
+{% set page_head_title = 'Contact Us' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('ContactUs.static', filename='css/ContactUs.css') }}">
+{% endblock %}
+{% block page_body_main_content %}
+<main>
+    <div class="contact-container">
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <label for="name">Your Name*</label>
+                <input type="text" id="name" name="name" required>
 
-                const userFullName = document.getElementById('user-full-name');
-                const signOutLink = document.getElementById('sign-out-link');
-                const user = JSON.parse(localStorage.getItem('loggedInUser'));
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
 
-                if (user) {
-                    userFullName.textContent = user.fullName;
-                    signOutLink.style.display = 'inline';
+                <label for="phone">Telephone*</label>
+                <input type="tel" id="phone" name="phone" required>
 
-                    document.getElementById('name').value = user.fullName;
-                    document.getElementById('email').value = user.email;
-                    document.getElementById('phone').value = user.phone;
-                }
+                <label for="message">Your Message*</label>
+                <textarea id="message" name="message" required></textarea>
 
-                signOutLink.addEventListener('click', () => {
-                    localStorage.removeItem('loggedInUser');
-                    window.location.href = 'Home.html';
-                });
-            });
-    </script>
-
-    <main>
-        <div class="contact-container">
-            <div class="contact-form">
-                <h1>Contact Us</h1>
-                <form id="contact-form">
-                    <label for="name">Your Name*</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Telephone*</label>
-                    <input type="tel" id="phone" name="phone" required>
-
-                    <label for="message">Your Message*</label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-            <div class="contact-info">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13420.088624175162!2d34.7818!3d32.0853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b78c7258b7d%3A0x689d71afda6a8ae4!2sTel+Aviv%2C+Israel!5e0!3m2!1sen!2sil!4v1620901005000!5m2!1sen!2sil" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <p>First block Tel Aviv</p>
-                <p>077-686787</p>
-            </div>
+                <button type="submit">Send</button>
+            </form>
         </div>
-    </main>
+        <div class="contact-info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13420.088624175162!2d34.7818!3d32.0853!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b78c7258b7d%3A0x689d71afda6a8ae4!2sTel+Aviv%2C+Israel!5e0!3m2!1sen!2sil!4v1620901005000!5m2!1sen!2sil" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>First block Tel Aviv</p>
+            <p>077-686787</p>
+        </div>
+    </div>
+</main>
+{% endblock %}
+{% block page_body_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const userFullName = document.getElementById('user-full-name');
+        const signOutLink = document.getElementById('sign-out-link');
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
 
-    <script src="../../shared/static/js/shared.js"></script>
-    <script src="../static/js/ContactUs.js"></script>
-</body>
-</html>
+        if (user) {
+            userFullName.textContent = user.fullName;
+            signOutLink.style.display = 'inline';
+
+            document.getElementById('name').value = user.fullName;
+            document.getElementById('email').value = user.email;
+            document.getElementById('phone').value = user.phone;
+        }
+
+        signOutLink.addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            window.location.href = '{{ url_for("home.home_page") }}';
+        });
+    });
+</script>
+<script src="{{ url_for('static', filename='js/shared.js') }}"></script>
+<script src="{{ url_for('ContactUs.static', filename='js/ContactUs.js') }}"></script>
+{% endblock %}

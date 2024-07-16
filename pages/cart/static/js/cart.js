@@ -82,7 +82,6 @@ function handleOrder(event, type) {
         alert('Your cart is empty. Please add items to your cart before proceeding to checkout.');
         return false;
     } else {
-
         const user = JSON.parse(localStorage.getItem('loggedInUser'));
         if (user) {
             let userOrders = JSON.parse(localStorage.getItem(`orders_${user.email}`)) || [];
@@ -96,13 +95,12 @@ function handleOrder(event, type) {
             localStorage.setItem(`orders_${user.email}`, JSON.stringify(userOrders));
         }
         localStorage.setItem('cartItems', JSON.stringify([]));
-
         localStorage.setItem('currentOrder', JSON.stringify(cartItems));
 
         if (type === 'checkout') {
-            window.location.href = 'checkout.html';
+            window.location.href = '/checkout';
         } else {
-            window.location.href = 'confirmation.html';
+            window.location.href = '/confirmation';
         }
     }
 }

@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Cake Page</title>
-    <link rel="stylesheet" href="../../shared/static/css/shared.css">
-    <link rel="stylesheet" href="../static/css/cakeDesign.css">
-</head>
-<body>
-<div id="shared-content"></div>
-<script>
-    fetch('shared.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('shared-content').innerHTML = html;
-        });
-</script>
-
+{% extends 'shared.html' %}
+{% set page_head_title = 'Cake Design' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('cakeDesign.static', filename='css/cakeDesign.css') }}">
+{% endblock %}
+{% block page_body_main_content %}
 <main>
     <div id="cake-details" class="cake-details"></div>
     <div class="customize">
@@ -60,9 +47,10 @@
         </form>
     </div>
 </main>
-
-<script src="../../shared/static/js/shared.js"></script>
-<script src="../static/js/cakeDesign.js"></script>
-
-</body>
-</html>
+{% endblock %}
+{% block page_body_js %}
+<script>
+    const buyNowUrl = "{{ url_for('checkout.checkout_page') }}";
+</script>
+<script src="{{ url_for('cakeDesign.static', filename='js/cakeDesign.js') }}"></script>
+{% endblock %}

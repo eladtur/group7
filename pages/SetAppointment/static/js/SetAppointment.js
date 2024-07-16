@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!user) {
         alert('In order to make an appointment you have to log in first');
-        window.location.href = 'Login.html';
+        window.location.href = '/Login';
         return;
     }
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = option.value;
         });
 
-        window.location.href = 'home.html';
+        window.location.href = '/home';
     });
 
     document.getElementById('name').value = user.fullName;

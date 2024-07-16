@@ -46,9 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('cartItems');
             console.log('Cart contents after clearing:', localStorage.getItem('cartItems'));
 
-            window.location.href = 'confirmation.html';
+            window.location.href = '/confirmation';
         }
     });
+
+    const totalPrice = localStorage.getItem('totalPrice') || '0.00';
+    document.getElementById('totalAmount').textContent = totalPrice;
 });
 
 function populateExpirationDateOptions(monthSelect, yearSelect) {
@@ -151,11 +154,6 @@ function getCurrentDate() {
     const day = String(now.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
 }
-const totalPrice = localStorage.getItem('totalPrice') || '0.00';
-
-document.getElementById('totalAmount').textContent = totalPrice;
-
-
 
 function handleOrder(event) {
     event.preventDefault();
@@ -186,7 +184,6 @@ function handleOrder(event) {
 
         localStorage.setItem('currentOrder', JSON.stringify(cartItems));
 
-        window.location.href = 'confirmation.html';
+        window.location.href = '/confirmation';
     }
 }
-

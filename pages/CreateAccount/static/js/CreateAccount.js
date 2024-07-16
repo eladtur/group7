@@ -1,4 +1,4 @@
-import User from '../../../../User.js';
+import User from '/static/js/User.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const createAccountForm = document.getElementById('create-account-form');
@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmPassword = document.getElementById('confirmPassword').value;
         const phone = document.getElementById('phone').value;
 
+        console.log('Form Submitted:', { fullName, email, password, confirmPassword, phone });
+
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
             return;
@@ -23,13 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const newUser = new User(fullName, email, password, phone);
-        users.push(newUser);
-        localStorage.setItem('users', JSON.stringify(users));
-        localStorage.setItem('loggedInUser', JSON.stringify(newUser));
+        try {
+            const newUser = new User(fullName, email, password, phone);
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('loggedInUser', JSON.stringify(newUser));
 
-        alert('Account created successfully!');
+            alert('Account created successfully!');
 
-        window.location.href = 'home.html';
+            window.location.href = '/';
+        } catch (error) {
+            console.error('Error creating account:', error);
+            alert('An error occurred while creating the account.');
+        }
     });
 });

@@ -1,42 +1,42 @@
 const selectedCake = JSON.parse(sessionStorage.getItem('selectedCake'));
 
 document.addEventListener('DOMContentLoaded', () => {
+  const cakeDetailsElement = document.getElementById('cake-details');
   if (selectedCake) {
-    document.getElementById('cake-details').innerHTML = `
+    cakeDetailsElement.innerHTML = `
       <img src="${selectedCake.image}" alt="${selectedCake.name}">
       <h2>${selectedCake.name}</h2>
       <p>${selectedCake.description}</p>
       <p class="price">$${selectedCake.price}</p>
     `;
   } else {
-    document.getElementById('cake-details').innerHTML = '<p>No cake selected. Please go back to the catalog and select a cake.</p>';
+    cakeDetailsElement.innerHTML = '<p>No cake selected. Please go back to the catalog and select a cake.</p>';
   }
 });
 
 function buyNow() {
-    var cakeBase = document.getElementById("cake-base").value;
-    var cream = document.getElementById("cream").value;
-    var dietaryPreference = document.getElementById("dietary-preference").value;
-    var inscription = document.getElementById("inscription").value;
-    var quantity = document.getElementById("quantity").value;
+  const cakeBase = document.getElementById("cake-base").value;
+  const cream = document.getElementById("cream").value;
+  const dietaryPreference = document.getElementById("dietary-preference").value;
+  const inscription = document.getElementById("inscription").value;
+  const quantity = document.getElementById("quantity").value;
 
-    if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
-        alert("Please fill in all fields.");
-        return false;
-    }
+  if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "") {
+    alert("Please fill in all fields.");
+    return false;
+  }
 
-    var selectedToBuyCake = {
-        cakeBase: cakeBase,
-        cream: cream,
-        dietaryPreference: dietaryPreference,
-        inscription: inscription,
-        quantity: quantity
-    };
+  const selectedToBuyCake = {
+    cakeBase: cakeBase,
+    cream: cream,
+    dietaryPreference: dietaryPreference,
+    inscription: inscription,
+    quantity: quantity
+  };
 
-    sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
+  sessionStorage.setItem('selectedToBuyCake', JSON.stringify(selectedToBuyCake));
 
-    window.location.href = 'checkout.html';
-
+  window.location.href = buyNowUrl;
 }
 
 function addToCart() {
@@ -44,10 +44,10 @@ function addToCart() {
   const cream = document.getElementById("cream").value;
   const dietaryPreference = document.getElementById("dietary-preference").value;
   const inscription = document.getElementById("inscription").value;
-  const quantity = parseInt(document.getElementById("quantity").value);
+  const quantity = document.getElementById("quantity").value;
 
-  if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity <= 0) {
-    alert("Please fill in quantity.");
+  if (cakeBase === "" || cream === "" || dietaryPreference === "" || quantity === "" || parseInt(quantity) <= 0) {
+    alert("Please fill in all fields and ensure quantity is greater than zero.");
     return;
   }
 
@@ -59,7 +59,7 @@ function addToCart() {
     cream: cream,
     dietaryPreference: dietaryPreference,
     inscription: inscription,
-    quantity: quantity,
+    quantity: parseInt(quantity),
     price: selectedCake.price
   };
 

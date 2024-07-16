@@ -34,5 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             ordersContainer.innerHTML = '<p>No orders have been made yet.</p>';
         }
+    } else {
+        alert('You must be logged in to view your profile.');
+        window.location.href = '/Login';
     }
 });

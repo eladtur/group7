@@ -1,45 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../../shared/static/css/shared.css">
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
-    <div id="shared-content"></div>
-    <script>
-        fetch('shared.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('shared-content').innerHTML = html;
+{% extends 'shared.html' %}
+{% set page_head_title = 'Login' %}
+{% block page_head_css %}
+<link rel="stylesheet" href="{{ url_for('Login.static', filename='css/Login.css') }}">
+{% endblock %}
+{% block page_body_main_content %}
+<main>
+    <div class="login-container">
+        <img src="{{ url_for('static', filename='pics/wedding-cake-logo.png') }}" alt="Wedding Cake Logo" class="logo">
+        <h1 class="main-title">S&E Luxury Wedding Cakes</h1>
+        <h2 class="sub-title">Account</h2>
+        <form id="loginForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-                const topLogo = document.getElementById('top-logo');
-                if (topLogo) {
-                    topLogo.style.display = 'none';
-                }
-            });
-    </script>
-    <main>
-        <div class="login-container">
-            <img src="../../../pics/wedding-cake-logo.png" alt="Wedding Cake Logo" class="logo">
-            <h1 class="main-title">S&E Luxury Wedding Cakes</h1>
-            <h2 class="sub-title">Account</h2>
-            <form id="loginForm">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <div class="button-group">
-                    <button type="submit" id="loginButton">Log In</button>
-                    <button type="button" id="signInButton">Sign IN</button>
-                </div>
-            </form>
-        </div>
-    </main>
-    <script src="login.js"></script>
-</body>
-</html>
+            <div class="button-group">
+                <button type="submit" id="loginButton">Log In</button>
+                <button type="button" id="signInButton">Sign IN</button>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}
+{% block page_body_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const topLogo = document.getElementById('top-logo');
+        if (topLogo) {
+            topLogo.style.display = 'none';
+        }
+    });
+</script>
+<script src="{{ url_for('Login.static', filename='js/login.js') }}"></script>
+{% endblock %}
