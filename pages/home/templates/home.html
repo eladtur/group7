@@ -5,34 +5,9 @@
 {% endblock %}
 {% block page_body_main_content %}
     <header>
-        <div class="top-bar">
-            <div class="left-icons">
-                <a href="{{ url_for('Profile.Profile_page') }}">
-                    <img src="{{ url_for('static', filename='pics/user.png') }}" height="16" width="16" alt="User Icon"/>
-                </a>
-                <a href="{{ url_for('cart.cart_page') }}">
-                    <img src="{{ url_for('static', filename='pics/shopping-cart.png') }}" height="16" width="16" alt="Shopping Cart Icon"/>
-                </a>
-                <a href="#" id="sign-out-link" style="display: none; margin-left: 10px;">Sign Out</a>
-            </div>
-            <div class="right-icons">
-                <span id="user-full-name"></span>
-            </div>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="{{ url_for('home.home_page') }}">Home</a></li>
-                <li><a href="{{ url_for('catalog.catalog_page') }}">Cakes Catalog</a></li>
-                <li><a href="{{ url_for('SetAppointment.SetAppointment_page') }}">Set an Appointment</a></li>
-                <li><a href="{{ url_for('Review.Review_page') }}">Review</a></li>
-                <li><a href="{{ url_for('ContactUs.ContactUs_page') }}">Contact us</a></li>
-            </ul>
-        </nav>
+
     </header>
-    <div class="logo" id="top-logo">
-        <img src="{{ url_for('static', filename='pics/wedding-cake-logo.png') }}" height="100" width="100" alt="Logo"/>
-        <div>S&E Luxury Wedding Cakes</div>
-    </div>
+
 
     <main>
         <div class="about">
@@ -86,6 +61,6 @@
             });
         });
     </script>
-    <script src="{{ url_for('static', filename='shared/js/shared.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/shared.js') }}"></script>
     <script src="{{ url_for('home.static', filename='js/home.js') }}"></script>
 {% endblock %}

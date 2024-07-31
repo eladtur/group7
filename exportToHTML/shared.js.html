@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>shared.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+shared.js</font>
+</center></td></tr></table>
+<pre><span class="s0">// document.addEventListener('DOMContentLoaded', async () =&gt; {</span>
+<span class="s0">//     const userFullName = document.getElementById('user-full-name');</span>
+<span class="s0">//     const signOutLink = document.getElementById('sign-out-link');</span>
+<span class="s0">//     //const profileIcon = document.querySelector('.left-icons a[href=&quot;{{ url_for('profile.profile_page') }}&quot;]');</span>
+<span class="s0">//     const profileIcon = document.querySelector('.left-icons a[href=&quot;#profile&quot;]'); // Update this selector to match your HTML structure</span>
+<span class="s0">//</span>
+<span class="s0">//     // const user = JSON.parse(localStorage.getItem('loggedInUser'));</span>
+<span class="s0">//</span>
+<span class="s0">//</span>
+<span class="s0">//</span>
+<span class="s0">//</span>
+<span class="s0">//     if (user) {</span>
+<span class="s0">//         userFullName.textContent = user.fullName;</span>
+<span class="s0">//         signOutLink.style.display = 'inline';</span>
+<span class="s0">//     } else {</span>
+<span class="s0">//         userFullName.textContent = '';</span>
+<span class="s0">//         signOutLink.style.display = 'none';</span>
+<span class="s0">//     }</span>
+<span class="s0">//</span>
+<span class="s0">//     signOutLink.addEventListener('click', () =&gt; {</span>
+<span class="s0">//         localStorage.removeItem('loggedInUser');</span>
+<span class="s0">//         window.location.href = '{{ url_for(&quot;login.login_page&quot;) }}';</span>
+<span class="s0">//     });</span>
+<span class="s0">//</span>
+<span class="s0">//     profileIcon.addEventListener('click', (e) =&gt; {</span>
+<span class="s0">//         e.preventDefault();</span>
+<span class="s0">//         console.log(&quot;Profile clicked&quot;)</span>
+<span class="s0">//         if (user) {</span>
+<span class="s0">//             window.location.href = '{{ url_for(&quot;profile.profile_page&quot;) }}';</span>
+<span class="s0">//         } else {</span>
+<span class="s0">//             window.location.href = '{{ url_for(&quot;login.login_page&quot;) }}';</span>
+<span class="s0">//         }</span>
+<span class="s0">//     });</span>
+<span class="s0">// });</span>
+
+
+
+<span class="s0">//</span>
+<span class="s0">//</span>
+<span class="s1">document</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s3">'DOMContentLoaded'</span><span class="s2">, </span><span class="s1">async </span><span class="s2">() =&gt; {</span>
+    <span class="s4">const </span><span class="s1">userFullName </span><span class="s2">= </span><span class="s1">document</span><span class="s2">.</span><span class="s1">getElementById</span><span class="s2">(</span><span class="s3">'user-full-name'</span><span class="s2">);</span>
+    <span class="s4">const </span><span class="s1">signOutLink </span><span class="s2">= </span><span class="s1">document</span><span class="s2">.</span><span class="s1">getElementById</span><span class="s2">(</span><span class="s3">'sign-out-link'</span><span class="s2">);</span>
+    <span class="s4">const </span><span class="s1">profileIcon </span><span class="s2">= </span><span class="s1">document</span><span class="s2">.</span><span class="s1">querySelector</span><span class="s2">(</span><span class="s3">'.left-icons a[href=&quot;#profile&quot;]'</span><span class="s2">); </span><span class="s0">// Update this selector to match your HTML structure</span>
+
+    <span class="s4">try </span><span class="s2">{</span>
+        <span class="s4">const </span><span class="s1">userResponse </span><span class="s2">= </span><span class="s4">await </span><span class="s1">fetch</span><span class="s2">(</span><span class="s3">'/get_user_info'</span><span class="s2">, {</span>
+            <span class="s1">method</span><span class="s2">: </span><span class="s3">'GET'</span><span class="s2">,</span>
+            <span class="s1">headers</span><span class="s2">: {</span>
+                <span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">,</span>
+            <span class="s2">},</span>
+            <span class="s1">credentials</span><span class="s2">: </span><span class="s3">'include' </span><span class="s0">// This ensures cookies are sent with the request</span>
+        <span class="s2">});</span>
+
+        <span class="s4">if </span><span class="s2">(</span><span class="s1">userResponse</span><span class="s2">.</span><span class="s1">ok</span><span class="s2">) {</span>
+            <span class="s4">const </span><span class="s1">user </span><span class="s2">= </span><span class="s4">await </span><span class="s1">userResponse</span><span class="s2">.</span><span class="s1">json</span><span class="s2">();</span>
+            <span class="s1">console</span><span class="s2">.</span><span class="s1">log</span><span class="s2">(</span><span class="s3">'User info:'</span><span class="s2">, </span><span class="s1">user</span><span class="s2">); </span><span class="s0">// Log user information</span>
+            <span class="s1">userFullName</span><span class="s2">.</span><span class="s1">textContent </span><span class="s2">= </span><span class="s1">user</span><span class="s2">.</span><span class="s1">Name</span><span class="s2">;</span>
+            <span class="s1">signOutLink</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">display </span><span class="s2">= </span><span class="s3">'inline'</span><span class="s2">; </span><span class="s0">// Ensure the sign-out link is visible</span>
+        <span class="s2">} </span><span class="s4">else </span><span class="s2">{</span>
+            <span class="s1">console</span><span class="s2">.</span><span class="s1">log</span><span class="s2">(</span><span class="s3">'User not logged in'</span><span class="s2">);</span>
+            <span class="s1">userFullName</span><span class="s2">.</span><span class="s1">textContent </span><span class="s2">= </span><span class="s3">''</span><span class="s2">;</span>
+            <span class="s1">signOutLink</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">display </span><span class="s2">= </span><span class="s3">'none'</span><span class="s2">;</span>
+            <span class="s0">//window.location.href = '/Login'; // Redirect to login if not logged in</span>
+        <span class="s2">}</span>
+    <span class="s2">} </span><span class="s4">catch </span><span class="s2">(</span><span class="s1">error</span><span class="s2">) {</span>
+        <span class="s1">console</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">'Error fetching user information:'</span><span class="s2">, </span><span class="s1">error</span><span class="s2">);</span>
+        <span class="s1">userFullName</span><span class="s2">.</span><span class="s1">textContent </span><span class="s2">= </span><span class="s3">''</span><span class="s2">;</span>
+        <span class="s1">signOutLink</span><span class="s2">.</span><span class="s1">style</span><span class="s2">.</span><span class="s1">display </span><span class="s2">= </span><span class="s3">'none'</span><span class="s2">;</span>
+        <span class="s1">window</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">href </span><span class="s2">= </span><span class="s3">'/Login'</span><span class="s2">; </span><span class="s0">// Redirect to login if not logged in</span>
+    <span class="s2">}</span>
+
+    <span class="s1">signOutLink</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s3">'click'</span><span class="s2">, </span><span class="s1">async </span><span class="s2">() =&gt; {</span>
+        <span class="s1">console</span><span class="s2">.</span><span class="s1">log</span><span class="s2">(</span><span class="s3">'Sign-out link clicked'</span><span class="s2">);</span>
+        <span class="s4">try </span><span class="s2">{</span>
+            <span class="s4">const </span><span class="s1">response </span><span class="s2">= </span><span class="s4">await </span><span class="s1">fetch</span><span class="s2">(</span><span class="s3">'/logout'</span><span class="s2">, {</span>
+                <span class="s1">method</span><span class="s2">: </span><span class="s3">'POST'</span><span class="s2">,</span>
+                <span class="s1">headers</span><span class="s2">: {</span>
+                    <span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">,</span>
+                <span class="s2">},</span>
+                <span class="s1">credentials</span><span class="s2">: </span><span class="s3">'include' </span><span class="s0">// This ensures cookies are sent with the request</span>
+            <span class="s2">});</span>
+
+            <span class="s4">if </span><span class="s2">(</span><span class="s1">response</span><span class="s2">.</span><span class="s1">ok</span><span class="s2">) {</span>
+                <span class="s1">console</span><span class="s2">.</span><span class="s1">log</span><span class="s2">(</span><span class="s3">'Logged out successfully'</span><span class="s2">);</span>
+                <span class="s1">window</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">href </span><span class="s2">= </span><span class="s3">'/Login'</span><span class="s2">; </span><span class="s0">// Adjust the URL for your login page</span>
+            <span class="s2">} </span><span class="s4">else </span><span class="s2">{</span>
+                <span class="s1">console</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">'Error logging out:'</span><span class="s2">, </span><span class="s1">response</span><span class="s2">.</span><span class="s1">statusText</span><span class="s2">);</span>
+                <span class="s1">alert</span><span class="s2">(</span><span class="s3">'Error logging out.'</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s4">catch </span><span class="s2">(</span><span class="s1">error</span><span class="s2">) {</span>
+            <span class="s1">console</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">'Error logging out:'</span><span class="s2">, </span><span class="s1">error</span><span class="s2">);</span>
+            <span class="s1">alert</span><span class="s2">(</span><span class="s3">'An error occurred while logging out. Please try again later.'</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">});</span>
+
+    <span class="s1">profileIcon</span><span class="s2">.</span><span class="s1">addEventListener</span><span class="s2">(</span><span class="s3">'click'</span><span class="s2">, (</span><span class="s1">e</span><span class="s2">) =&gt; {</span>
+        <span class="s1">e</span><span class="s2">.</span><span class="s1">preventDefault</span><span class="s2">();</span>
+        <span class="s1">fetch</span><span class="s2">(</span><span class="s3">'/get_user_info'</span><span class="s2">, {</span>
+            <span class="s1">method</span><span class="s2">: </span><span class="s3">'GET'</span><span class="s2">,</span>
+            <span class="s1">headers</span><span class="s2">: {</span>
+                <span class="s3">'Content-Type'</span><span class="s2">: </span><span class="s3">'application/json'</span><span class="s2">,</span>
+            <span class="s2">},</span>
+            <span class="s1">credentials</span><span class="s2">: </span><span class="s3">'include' </span><span class="s0">// This ensures cookies are sent with the request</span>
+        <span class="s2">})</span>
+        <span class="s2">.</span><span class="s1">then</span><span class="s2">(</span><span class="s1">response </span><span class="s2">=&gt; {</span>
+            <span class="s1">console</span><span class="s2">.</span><span class="s1">log</span><span class="s2">(</span><span class="s3">&quot;response: &quot;</span><span class="s2">, </span><span class="s1">response</span><span class="s2">);</span>
+            <span class="s4">if </span><span class="s2">(</span><span class="s1">response</span><span class="s2">.</span><span class="s1">ok</span><span class="s2">) {</span>
+                <span class="s1">window</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">href </span><span class="s2">= </span><span class="s3">'/Profile'</span><span class="s2">; </span><span class="s0">// Adjust the URL for your profile page</span>
+            <span class="s2">} </span><span class="s4">else </span><span class="s2">{</span>
+                <span class="s1">window</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">href </span><span class="s2">= </span><span class="s3">'/Login'</span><span class="s2">; </span><span class="s0">// Adjust the URL for your login page</span>
+            <span class="s2">}</span>
+        <span class="s2">})</span>
+        <span class="s2">.</span><span class="s1">catch</span><span class="s2">(</span><span class="s1">error </span><span class="s2">=&gt; {</span>
+            <span class="s1">console</span><span class="s2">.</span><span class="s1">error</span><span class="s2">(</span><span class="s3">'Error checking user session:'</span><span class="s2">, </span><span class="s1">error</span><span class="s2">);</span>
+            <span class="s1">window</span><span class="s2">.</span><span class="s1">location</span><span class="s2">.</span><span class="s1">href </span><span class="s2">= </span><span class="s3">'/Login'</span><span class="s2">; </span><span class="s0">// Adjust the URL for your login page</span>
+        <span class="s2">});</span>
+    <span class="s2">});</span>
+<span class="s2">});</span>
+</pre>
+</body>
+</html>

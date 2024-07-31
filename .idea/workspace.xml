@@ -5,81 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8cbce509-cf34-4057-9843-d88d5856a961" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/analyzeDB.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db_connector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongodb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/group7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/group7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_07_2024_19_09_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_07_2024_19_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_07_2024_19_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_07_2024_19_09__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2024_13_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_06_2024_13_16__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ContactUs/ContactUs.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ContactUs/ContactUs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ContactUs/static/js/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ContactUs/static/js/ContactUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ContactUs/templates/ContactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ContactUs/templates/ContactUs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/CreateAccount/CreateAccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/CreateAccount/CreateAccount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/CreateAccount/static/js/CreateAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/CreateAccount/static/js/CreateAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/CreateAccount/templates/CreateAccount.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/CreateAccount/templates/CreateAccount.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Login/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Login/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Login/static/css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Login/static/css/Login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Login/static/js/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Login/static/js/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Login/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Login/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Profile/Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Profile/Profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Profile/static/js/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Profile/static/js/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Profile/templates/Profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Profile/templates/Profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Review/Review.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Review/Review.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Review/static/js/Review.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Review/static/js/Review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Review/templates/Review.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Review/templates/Review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/SetAppointment/SetAppointment.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SetAppointment/SetAppointment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/SetAppointment/static/js/SetAppointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SetAppointment/static/js/SetAppointment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/SetAppointment/templates/SetAppointment.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SetAppointment/templates/SetAppointment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/cakeDesign/cakeDesign.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cakeDesign/cakeDesign.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/cakeDesign/static/js/cakeDesign.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cakeDesign/static/js/cakeDesign.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/cakeDesign/templates/cakeDesign.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cakeDesign/templates/cakeDesign.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/cart/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/cart.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/cart/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/static/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cart/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/catalog/catalog.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/catalog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/catalog/static/js/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/static/js/catalog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/catalog/templates/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/catalog/templates/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/checkout/checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout/checkout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/checkout/static/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout/static/js/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/checkout/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/checkout/templates/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/confirmation/confirmation.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confirmation/confirmation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/confirmation/templates/confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confirmation/templates/confirmation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/static/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/static/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/static/js/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shared/shared.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shared/static/css/shared.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/shared.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shared/static/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/shared.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/shared/templates/shared.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/69029002-225b-4fe6-8118-0574a1c9c6d7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/69029002-225b-4fe6-8118-0574a1c9c6d7.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/BlossomingBeautyCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/BlossomingBeautyCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/BlueBlossomCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/BlueBlossomCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/CupcakeCarnival.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/CupcakeCarnival.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/DecadentDelightCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/DecadentDelightCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/ElegantLayersCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/ElegantLayersCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/FloraCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/FloraCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/FloralCascadeCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/FloralCascadeCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/JuliCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/JuliCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/JupiterCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/JupiterCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/MagicGardenCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/MagicGardenCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/MajesticTierCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/MajesticTierCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/Nicole.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/Nicole.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/PinkHeartCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/PinkHeartCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/PrettyInPinkCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/PrettyInPinkCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/PurpleDelightCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/PurpleDelightCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/RainbowSprinkleCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/RainbowSprinkleCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/RoseEleganceCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/RoseEleganceCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/TheCakesLady.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/TheCakesLady.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/TheMuffinMan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/TheMuffinMan.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/YasminCake.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/YasminCake.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/shopping-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/shopping-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pics/wedding-cake-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pics/wedding-cake-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/shared.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/shared.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +52,19 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -113,38 +90,129 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.CreateAccount.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Home.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Review.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.shared.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.home.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/דניאל/PycharmProjects/group7&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Flask server.Flask (app).executor": "Run",
+    "Flask server.Flask (app.py).executor": "Run",
+    "Flask server.Flask.executor": "Run",
+    "JavaScript Debug.CreateAccount.html.executor": "Run",
+    "JavaScript Debug.Home.html.executor": "Run",
+    "JavaScript Debug.Login.html.executor": "Run",
+    "JavaScript Debug.Review.html.executor": "Run",
+    "JavaScript Debug.home.html.executor": "Run",
+    "JavaScript Debug.shared.html.executor": "Run",
+    "Python.Home.executor": "Run",
+    "Python.analyzeDB.executor": "Run",
+    "Python.app.executor": "Run",
+    "Python.cart.executor": "Run",
+    "Python.db_connector.executor": "Run",
+    "Python.mongodb.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/User/PycharmProjects/WEB_courseGroup7",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\דניאל\PycharmProjects\group7\static\js" />
-      <recent name="C:\Users\דניאל\PycharmProjects\group7\static" />
-      <recent name="C:\Users\דניאל\PycharmProjects\group7" />
-      <recent name="C:\Users\דניאל\PycharmProjects\group7\templates" />
-      <recent name="C:\Users\דניאל\PycharmProjects\group7\pics" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages\shared\static\css" />
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages\shared\templates" />
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages\shared\static\js" />
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages\SetAppointment\static\js" />
+      <recent name="C:\Users\User\PycharmProjects\WEB_courseGroup7\pages\SetAppointment\static\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="group7" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="db_connector" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="group7" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db_connector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="group7" />
+      <option name="target" value="app" />
+      <option name="targetType" value="PYTHON" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="FLASK" value="app.py" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9 (pythonProject1)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.Flask (app.py)" />
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.db_connector" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.db_connector" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -171,10 +239,24 @@
       <workItem from="1718637397694" duration="10006000" />
       <workItem from="1718898027117" duration="2551000" />
       <workItem from="1719071274735" duration="16785000" />
-      <workItem from="1719143172043" duration="10008000" />
-      <workItem from="1721131713765" duration="3059000" />
-      <workItem from="1721134967969" duration="4667000" />
-      <workItem from="1721139810920" duration="7755000" />
+      <workItem from="1719143172043" duration="11054000" />
+      <workItem from="1719931966435" duration="3266000" />
+      <workItem from="1720530410004" duration="5082000" />
+      <workItem from="1720551006662" duration="1827000" />
+      <workItem from="1720615708061" duration="1919000" />
+      <workItem from="1720617661053" duration="25000" />
+      <workItem from="1720617759178" duration="8752000" />
+      <workItem from="1721291058325" duration="2470000" />
+      <workItem from="1721293559682" duration="284000" />
+      <workItem from="1721294178065" duration="303000" />
+      <workItem from="1721297109240" duration="11306000" />
+      <workItem from="1721668088797" duration="6627000" />
+      <workItem from="1721750958258" duration="4603000" />
+      <workItem from="1721816077544" duration="3740000" />
+      <workItem from="1721832957124" duration="5466000" />
+      <workItem from="1721979017995" duration="51908000" />
+      <workItem from="1722329441627" duration="36293000" />
+      <workItem from="1722416493428" duration="36684000" />
     </task>
     <servers />
   </component>
@@ -193,7 +275,13 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/group7$home.coverage" NAME="home Coverage Results" MODIFIED="1721133093361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pages/home" />
-    <SUITE FILE_PATH="coverage/group7$app.coverage" NAME="app Coverage Results" MODIFIED="1721148311707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$Home.coverage" NAME="Home Coverage Results" MODIFIED="1720624288710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pages/Home" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$app.coverage" NAME="app Coverage Results" MODIFIED="1721837152331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$mongodb.coverage" NAME="mongodb Coverage Results" MODIFIED="1721979556807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$cart.coverage" NAME="cart Coverage Results" MODIFIED="1722431508901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pages/cart" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$analyzeDB.coverage" NAME="analyzeDB Coverage Results" MODIFIED="1722455894135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$Flask.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1721293482002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\User\PycharmProjects\WEB_courseGroup7" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$db_connector.coverage" NAME="db_connector Coverage Results" MODIFIED="1722358947500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WEB_courseGroup7$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1722455442146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

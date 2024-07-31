@@ -1,24 +1,37 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', function(event) {
+
+    loginForm.addEventListener('submit', async function(event) {
         event.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        const users = JSON.parse(localStorage.getItem('users')) || [];
+        console.log("In login: email=", email);
 
-        const user = users.find(user => user.email === email);
+        try {
+            const response = await fetch('/login_action', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ CustomerEmail: email, Password: password }),
+                credentials: 'include' // This ensures cookies are sent with the request
+            });
 
-        if (user) {
-            if (user.password === password) {
-                localStorage.setItem('loggedInUser', JSON.stringify(user));
-                window.location.href = '/home';
+            const result = await response.json();
+
+            if (response.ok) {
+                console.log('Login successful, redirecting to /home');
+                window.location.href = '/home'; // Redirect to the home page after successful login
             } else {
-                alert('Invalid Password');
+                console.error('Error logging in:', result.message);
+                alert(result.message);
             }
-        } else {
-            alert('User does not exist. Please sign in first.');
+        } catch (error) {
+            console.error('Error logging in:', error);
+            alert('An error occurred while logging in. Please try again later.');
         }
     });
 
@@ -26,3 +39,56 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = '/CreateAccount';
     });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const loginForm = document.getElementById('loginForm');
+//
+//     loginForm.addEventListener('submit', async function(event) {
+//         event.preventDefault();
+//
+//         const email = document.getElementById('email').value;
+//         const password = document.getElementById('password').value;
+//
+//         // const users = JSON.parse(localStorage.getItem('users')) || [];
+//         // const user = users.find(user => user.email === email);
+//         //
+//         // if (user) {
+//         //     if (user.password === password) {
+//         //         localStorage.setItem('loggedInUser', JSON.stringify(user));
+//         //         window.location.href = '/home';
+//         //     } else {
+//         //         alert('Invalid Password');
+//         //     }
+//         // } else {
+//         //     alert('User does not exist. Please sign in first.');
+//         // }
+//
+//         try {
+//             const response = await fetch('http://127.0.0.1:5000/login', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify({ CustomerEmail: email, Password: password }),
+//             });
+//
+//             const result = await response.json();
+//
+//             if (response.ok) {
+//                 localStorage.setItem('loggedInUser', JSON.stringify(result.user));
+//                 window.location.href = '/home';
+//             } else {
+//                 alert(result.message);
+//             }
+//         } catch (error) {
+//             console.error('Error logging in:', error);
+//             alert('An error occurred while logging in. Please try again later.');
+//         }
+//
+//     });
+//
+//     document.getElementById('signInButton').addEventListener('click', () => {
+//         window.location.href = '/CreateAccount';
+//     });
+// });
