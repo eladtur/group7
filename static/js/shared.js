@@ -117,21 +117,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     });
 });
-/*fetch('/insert-cart-item', {
-        method: 'POST',
-        body:JSON.stringify({"product_id": "6699147b433e8fe0227248a8", "quantity": 1}),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        credentials: 'include' // This ensures cookies are sent with the request
-    })
-/*
-fetch('/delete-cart-item', {
-        method: 'POST',
-        body:JSON.stringify({"product_id": "6699147b433e8fe0227248a8", "quantity": 1}),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        credentials: 'include' // This ensures cookies are sent with the request
-    })
- */

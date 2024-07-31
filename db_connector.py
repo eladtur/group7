@@ -4,13 +4,10 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from werkzeug.security import generate_password_hash, check_password_hash
 
-# get your uri from .env file
 uri = os.environ.get('DB_URI')
 
-# create cluster
 cluster = MongoClient(uri, server_api=ServerApi('1'))
 
-# get all dbs and collecstions that needed
 mydatabase = cluster['S&E_db']
 customers_col = mydatabase['Customers Collection']
 cakes_col = mydatabase['Cakes Collection']
@@ -65,39 +62,6 @@ def insert_new_cart(customer_id):
     result = carts_col.insert_one(cart)
     return result
 
-#
-# def insert_cart_item(cart_id, product_id, quantity):
-#     from bson import ObjectId
-#     if not isinstance(cart_id, ObjectId):
-#         cart_id = ObjectId(cart_id)
-#     if not isinstance(product_id, ObjectId):
-#         product_id = ObjectId(product_id)
-#     result = carts_col.aggregate([
-#         {"$match": {"_id": cart_id}},
-#         {"$unwind": "$items"},
-#         {"$match": {"items.product_id": product_id}},
-#         {"$project": {"items.quantity": 1, "_id": 0}}
-#     ])
-#
-#     # Check if the product was found in the cart
-#     existing_item = next(result, None)
-#
-#     if existing_item:
-#         # Update the quantity of the existing cart item
-#         carts_col.update_one(
-#             {"_id": cart_id, "items.product_id": product_id},
-#             {"$inc": {"items.$.quantity": quantity}}
-#         )
-#         print(f"Updated product {product_id} quantity in cart {cart_id}")
-#         return True # Item exists and we added quantity
-#     else:
-#         # Insert a new cart item
-#         carts_col.update_one(
-#             {"_id": cart_id},
-#             {"$push": {"items": {"product_id": product_id, "quantity": quantity}}}
-#         )
-#         print(f"Inserted product {product_id} into cart {cart_id}")
-#         return False # Item didn't exist and we created a new cart item
 
 def insert_cart_item(cart_id, item):
     from bson import ObjectId
